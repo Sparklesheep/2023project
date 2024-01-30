@@ -1,0 +1,6253 @@
+"fix: check each_blocks is empty on mount (#7505)
+
+fixes #8282"
+"fix(perf): use classList.toggle instead of add/remove (#8629)
+
+`classList.toggle(..., flag)` has been a part of the DOM standard forever,
+so better use it instead of possibly causing browser deopts by using dynamic attribute access.
+The `!!` is required because an `undefined` flag means flipping the current state.
+
+---------
+
+Co-authored-by: Dominik G <dominik.goepel@gmx.de>
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+Co-authored-by: Rich Harris <hello@rich-harris.dev>"
+"docs: Clarify when bind:group does not work (#8540)
+
+Clarify documentation around when bind:group does and does not work. See issue #2308"
+"[docs] fix typo in 02-template-syntax.md (#7593)
+
+Tiny typo."
+"fix: race condition in `svelte:element` with transition #7948 (#7949)
+
+fixes #7948
+- The assignment of the variable ""previous_tag"" was incorrectly positioned and could cause race condition when used with transitions.
+- We need another variable to detect when we are in a transition to remove a node
+
+---------
+
+Co-authored-by: Yuichiro Yamashita <xydybaseball@gmail.com>"
+"fix: props with dash #9964 (#9993)
+
+* fix member call
+
+* format"
+GitHub Workflows security hardening (#7883)
+docs: matches hint with existing structure and solution (#8915)
+"docs: corrects syntax error in transition code sample (#8169)
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>"
+"docs: fix white text on white BG in examples (#8821)
+
+fixes ##8816"
+"docs: handle warnings in examples page (#8836)
+
+ignore some, fix others
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+docs: fix link (#9071)
+feat: add `readonly` method to convert writable store to readonly (#6518)
+feat: Add -replacestate/-keepfocus to SvelteKit anchor tag props (#8281)
+"docs: Fix a regression for a quoted-attribute example (#9103)
+
+* Fix a doc regression for a quoted-attribute example
+
+* Prettier ignore
+
+---------
+
+Co-authored-by: Puru Vijay <47742487+PuruVJ@users.noreply.github.com>"
+"[feat] add a11y check on abstract roles (#6241)
+
+* add a11y check on abstract roles
+
+* use aria-query and move warnings to compiler_warnings file
+
+* uppercase warning message
+
+Co-authored-by: tanhauhau <lhtan93@gmail.com>"
+"[feat] check noninteractive roles on interactive elements (#5955)
+
+* check noninteractive roles on interactive elements
+
+* refactor to match the eslint-plugin-jsx-a11y implementation
+
+* update test case
+
+Co-authored-by: tanhauhau <lhtan93@gmail.com>"
+blog: fix typo in 'svelte.dev: A complete overhaul' blog entry (#9438)
+fix:change typescript url (#9093)
+fix(styling): fix styling on documentation for lesson 8-h (#8990)
+"fix: don't throw when calling writable() unsubscribe twice (#8186)
+
+Fixes one case of #4765
+
+---------
+
+Co-authored-by: Ben Bucksch <bbucksch@jw.org>
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+Co-authored-by: Yuichiro Yamashita <xydybaseball@gmail.com>"
+[docs] FAQ cleanup (#7452)
+[chore] upgrade to eslint 8 (#7506)
+update changelog
+cleanup PR links in last blog post
+[docs] npm create needs @latest tag (#7687)
+Update CHANGELOG.md
+[docs] clarify reactivity rules (#7802)
+[docs] remove beta label from SvelteKit mention (#7853)
+[docs] create getting started guide outside blog (#7812)
+[docs] update SvelteKit status (#7919)
+[chore] upgrade dependencies (#7982)
+update changelog
+[docs] publish roadmap. add process section to contributor's guide and re-organize a bit (#7965)
+[docs] add some basic docs about bundler plugins (#8092)
+update changelog
+"fix: make `noreferrer` warning less zealous (#8230)
+
+Co-authored-by: Yuichiro Yamashita <xydybaseball@gmail.com>"
+update changelog
+chore: update PR template (#8255)
+chore: switch to @jridgewell/sourcemap-codec (#8321)
+"chore: upgrade magic-string (#8339)
+
+- overwrite -> update
+- update comments"
+chore: upgrade to code-red 1.0 (#8349)
+chore: upgrade rollup plugins (#8350)
+chore: upgrade dependencies (#8352)
+chore: upgrade aria-query (#8353)
+chore: rename variable to follow coding style (#8385)
+chore: bump @jridgewell/sourcemap-codec (#8458)
+site: tweak content layout (#8483)
+chore: simplify Svelte 4 CI (#8487)
+chore: bump engines field (#8489)
+"chore: upgrade to TypeScript 5 (#8488)
+
+- upgrade to TypeScript 5
+- upgrade @ampproject/remapping
+- remove obsolete workarounds
+
+---------
+
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+chore: Svelte 4 dependency upgrades (#8486)
+"chore: upgrade rollup (#8491)
+
+bump to rollup 3. Includes reworking the ""treat those imports as external"" a bit so that Rollup builds correctly but doesn't bundle some of the (now relative) imports
+
+---------
+
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+chore: run fewer CI jobs (#8496)
+breaking: remove legacy package.json files (#8515)
+chore: switch from npm to pnpm (#8514)
+chore: run CI tests on Node 20 (#8519)
+chore: fix CI setup for unit tests (#8530)
+Update CHANGELOG.md
+fix: improve setup of default export and remove `svelte/ssr` (#8516)
+docs: fix links in changelog
+docs: update SvelteKit alternatives section (#8596)
+"chore: update eslint config (#8608)
+
+Co-authored-by: gtmnayan <gtmnayan@gmail.com>"
+chore: switch to released version of eslint-config
+chore: remove unused codemod-lazy-props.mjs (#8619)
+chore: remove unused source-map-support depedency (#8622)
+chore: convert to monorepo (#8644)
+docs: update changelog with required version of vite-plugin-svelte (#8654)
+docs: update changelog to follow changesets format (#8642)
+docs: update changelog with minimum `rollup-plugin-svelte` and `svelte-loader` versions (#8666)
+docs: correct link in changelog
+"chore: setup changesets (#8668)
+
+Co-authored-by: dominikg <dominik.goepel@gmx.de>"
+chore: upgrade to pnpm 8.6.0 (#8693)
+merge version-4 branch
+site: fix svelte-check errors (#8696)
+chore: remove prepare script (#8713)
+chore: upgrade eslint config (#8717)
+"chore: upgrade aria-query and axobject-query (#8724)
+
+Co-authored-by: gtmnayan <gtmnayan@gmail.com>"
+merge
+chore: update `locate-character` and `dts-buddy` (#8737)
+merge
+site: update terminal section, move survey text lower, lowercase headings (#8745)
+docs: fix broken link (#8746)
+"chore: update code-red (#8719)
+
+
+---------
+
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>
+Co-authored-by: gtmnayan <gtmnayan@gmail.com>"
+merge master
+merge changelog for 3.59.2
+chore: update changesets branch
+remove docs workflow
+remove package-lock.json
+site: alternate footer design (#8774)
+docs: update link
+docs: list minimum versions for r-p-s and svelte-loader (#8788)
+chore: better error messages for CJS users (#8790)
+svelte 4 blog post
+update stats for final release
+docs: fix link in changelog
+chore: upgrade dependencies (#8827)
+site: add a robots.txt (#8913)
+site: block tutorial from search engines (#8932)
+docs: add a couple internal JSDocs and cleanup from TS migration (#8940)
+"chore: fix broken script for generating parser tests (#8945)
+
+
+---------
+
+Co-authored-by: gtmnayan <50981692+gtm-nayan@users.noreply.github.com>
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+site: specify width/height and fix prettier (#8917)
+"perf: optimize imports that are not mutated or reassigned (#8948)
+
+this means such imports are seen as static and subsequently Svelte needs to generate way less code"
+"docs: clarify performance concerns around props and restProps (#9047)
+
+* docs: clarify performance concerns around props and restProps
+
+* Update documentation/docs/02-template-syntax/02-basic-markup.md"
+docs: update component directives page (#9040)
+site: fix removal of tutorial from search engines (#9117)
+site: remove unused font files (#9119)
+"site: preload fonts (#9132)
+
+Co-authored-by: Puru Vijay <devpuruvj@gmail.com>"
+chore: move playground (#9131)
+"site: turn off edge serving for REPL (#9136)
+
+Our core web vitals have really taken a hit since enabling edge serving. I ran various configs against pagespeed.web.dev and the traditional serverless functions do the best. That's at least partially because I believe serverless functions default to running in us-east-1 where our supabase instance is located. Therefore try going back to Serverless for a while to see the impact."
+fix: update paths for playground (#9139)
+site: bump site-kit (#9157)
+site: remove view transitions from blog (#9201)
+docs: remove typescript faq (#9108)
+chore: update PR template with note about rewrite (#9231)
+chore: upgrade magic-string (#9292)
+"chore: bump jsdom to address word-wrap vulnerability (#9046)
+
+* chore: bump jsdom to address word-wrap vulnerability
+
+* downgrade jsdom
+
+* fix lockfile"
+chore: upgrade semver and postcss to address four security issues (#9322)
+chore: fix failing format linting (#9338)
+site: fix 404 page by upgrading SvelteKit and avoiding null reference (#9337)
+fix: improve a11y-click-events-have-key-events message (#9358)
+docs: clarify "obsolete" in runes blog post (#9364)
+site: fix type errors in JS files (#9354)
+"chore: update PR template (#9397)
+
+* chore: update PR template
+
+* Update .github/PULL_REQUEST_TEMPLATE.md
+
+---------
+
+Co-authored-by: Rich Harris <richard.a.harris@gmail.com>"
+"chore: tweak changeset (#9667)
+
+* chore: tweak changeset
+
+* Update .changeset/slimy-clouds-talk.md
+
+* Update seven-ravens-check.md"
+docs: update FAQ regarding Svelte 5 release date (#9882)
+chore: upgrade prettier to 3.1 (#10134)
+chore: fix xml2js security warning (#10133)
+add funding.json (#10172)
+"docs: better clarify not to compute state in `$effect` (#9940)
+
+* docs: better clarify not to compute state in `$effect`
+
+* Update 02-runes.md
+
+* Update 02-runes.md
+
+* Update 02-runes.md
+
+* Update sites/svelte-5-preview/src/routes/docs/content/01-api/02-runes.md
+
+* Update 02-runes.md"
+"[docs] fix link to webpack-loader (#7460)
+
+Change link for Webpack-loader from svelte-loader-hot, which is deprecated, to official svelte-loader."
+"[fix] Suppress `a11y-no-noninteractive-tabindex` warning if an element has a `tabpanel` (#8025)
+
+* update tabindex warning to ignore tabpanels
+
+* refactor
+
+Co-authored-by: Yuichiro Yamashita <xydybaseball@gmail.com>"
+"warn on assignment to const (#4960)
+
+* warn on assignment to const
+
+* fix formatting and switch to error
+
+* check most local scopes first
+
+* fix logic and add more tests
+
+* more formatting
+
+* Fix broken test
+
+* use find_owner instead
+
+Co-authored-by: tanhauhau <lhtan93@gmail.com>"
+[feat] dispatch cancelable custom events (#7064)
+"[chore] upgrade source-map (#7729)
+
+Fixes #7728"
+"[fix] Local transitions from #key blocks (#7286)
+
+* fix: Local transitions from #key blocks
+
+When adding `|local` to a transition inside a {#key} block, only the outro was triggered not the intro.
+
+This PR fixes #5950
+
+* add test case
+
+Co-authored-by: tanhauhau <lhtan93@gmail.com>"
+"fix: Prevent intro from cancelling outro (#7300)
+
+The issue
+
+1. When the block.i (intro) is called it registers a callback (via add_render_callback)
+2. Then the block.o (outro) is called and start the outro and adds a callback to detach on outroend
+3. The render callback from the intro is executed, starts the intro and cancels the outro animation
+
+This causes components that should've been destroyed to stay on the page.
+
+The fix in this PR: Inside the intro render callback it checks if it is still current and if it isn't (because an outro was triggered) it won't start the intro animation.
+
+fixes #6152
+fixes #6812"
+"feat: css units in fly & blur transitions (#7623)
+
+Closes #6050
+
+---------
+
+Co-authored-by: Bob Fanger <b.fanger@wearetriple.com>
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>"
+"feat: add readyState binding for media elements (#6843)
+
+Closes #6666
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+docs: fix typo in v4 migration guide (#8890)
+"docs: update 06-accessibility-warnings.md (#8342)
+
+Convert recommended events to use Svelte syntax, and include deprecation warning re https://developer.mozilla.org/en-US/docs/Web/API/Element/keypress_event"
+docs: use latest tag when creating vite template (#9151)
+"Fix accessibility of options tutorial. (#8308)
+
+Use button instead of non-interactive element (div).
+(Removes a Svelte a11y warning.)"
+"chore: remove internal functions from `svelte/transition` exports (#10132)
+
+* chore: remove internal functions from `svelte/transition` exports
+
+* regenerate types"
+"[fix] check parentNode exists before removing child (#6910)
+
+Fixes #6037"
+"fix: omit a11y warning on `<video>` when `aria-hidden=""true""` (#7880)
+
+Related to #5967. Closes #7874
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+Co-authored-by: Yuichiro Yamashita <xydybaseball@gmail.com>"
+feat: document fullscreenElement and visibilityState bindings (#8507)
+docs: Tutorial body had <svelte:body /> even though <svelte:document /> was the subject (#8396)
+docs: fix style directive with important modifier example (#8802)
+"breaking: update onMount type definition to prevent async function return (#8136)
+
+
+---------
+
+Co-authored-by: Yuichiro Yamashita <xydybaseball@gmail.com>
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+"[fix] Adding part HTML attribute to typings (#8182)
+
+fixes #8181"
+[docs] Add WebdriverIO as alternative testing solution
+"feat: add a11y `autocomplete-valid` (#8520)
+
+Part of #820
+
+---------
+
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+fix package-lock.json
+update changelog
+update changelog
+update changelog
+update changelog
+update changelog
+-> v3.48.0
+-> v3.49.0
+-> v3.50.0
+-> v3.50.1
+-> v3.51.0
+-> v3.52.0
+update changelog
+-> v3.53.0
+-> v3.53.1
+update changelog
+update changelog
+-> v3.54.0
+-> v3.55.0
+-> v3.55.1
+chore: mark Promise.resolve() as pure to appease Agadoo (#8366)
+-> v3.56.0
+-> v3.57.0
+update changelog
+update changelog
+-> v3.58.0
+-> v3.59.0
+-> v3.59.1
+-> v3.59.2
+chore: fix tests on Node 18.17.0 (#9049)
+docs: add FAQ about why you can't keep unused styles (#9193)
+"chore: implemented a small runtime optimization for SSR (#7539)
+
+Prior to this change, the compiler would generate a template literal that had many purely static
+string variables nested within it. This change collapses these static strings into the surrounding
+template literal which should result in (minor) size and performance improvements for the SSR
+generated code.
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+[chore] shorten import statement (#8178)
+"feat: add support for resize observer bindings (#8022)
+
+Implements ResizeObserver bindings: #5524 (comment)
+Continuation of: #5963
+Related to #7583
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+docs: Make "unquoted" example actually unquoted (#8937)
+"feat: support exclusively special characters in component filenames (#7664)
+
+Fixes #7143
+
+---------
+
+Co-authored-by: Tan Li Hau <tanhauhau@users.noreply.github.com>
+Co-authored-by: Yuichiro Yamashita <xydybaseball@gmail.com>"
+[docs] "What's new in Svelte" December newsletter (#8064)
+docs: "What's new in Svelte" July newsletter (#8853)
+docs: "What's new in Svelte" August newsletter (#9034)
+"docs: ""What's new in Svelte"" September newsletter (#9158)
+
+* first draft. sept
+
+* address pr feedback
+
+* forgot a Joy of Code video!"
+docs: "What's new in Svelte" October newsletter (#9271)
+"docs: ""What's new in Svelte"" November newsletter (#9360)
+
+* november draft
+
+* Apply suggestions from code review
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+Co-authored-by: Stanislav Khromov <stanislav.khromov+github@gmail.com>
+
+* add version number to kit suggestion
+
+* add svelte summit blurb
+
+* update title, move summit to intro, add deno note
+
+* Update documentation/blog/2023-11-01-whats-new-in-svelte-november-2023.md
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+
+---------
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+Co-authored-by: Stanislav Khromov <stanislav.khromov+github@gmail.com>"
+fix typo in release notes (#10003)
+[docs] fix inconsistent margin in svelte/motion spring tutorial (#8081)
+"[docs] ""What's new in Svelte"" May newsletter (#7483)
+
+Co-authored-by: Yuichiro Yamashita <xydybaseball@gmail.com>
+Co-authored-by: gtmnayan <50981692+gtm-nayan@users.noreply.github.com>
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>"
+[docs] "What's new in Svelte" June newsletter (#7565)
+[docs] "What's new in Svelte" July newsletter (#7637)
+[docs] "What's new in Svelte" August newsletter (#7741)
+[docs] "What's new in Svelte" September newsletter (#7814)
+" [docs] ""What's new in Svelte"" October newsletter (#7898)
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+Co-authored-by: gtmnayan <50981692+gtm-nayan@users.noreply.github.com>
+Co-authored-by: Lyu, Wei-Da <36730922+jasonlyu123@users.noreply.github.com>
+Co-authored-by: Willow (GHOST) <ghostdevbusiness@gmail.com>"
+"[docs] ""What's new in Svelte"" November newsletter (#7986)
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+"feat: `bind:innerText` for `contenteditable` (#4291)
+
+closes #3311
+
+---------
+
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+"fix: fixes sveltejs/svelte#8214 `bind:group` to `undefined` (#8215)
+
+* fixes sveltejs/svelte#8214 bind:group to undefined
+
+* fix code and add test
+
+---------
+
+Co-authored-by: Yuichiro Yamashita <xydybaseball@gmail.com>"
+chore: update copyright year to include 2024 (#10047)
+"Bump svelte from 3.43.0 to 3.49.0 (#7689)
+
+Bumps [svelte](https://github.com/sveltejs/svelte) from 3.43.0 to 3.49.0.
+- [Release notes](https://github.com/sveltejs/svelte/releases)
+- [Changelog](https://github.com/sveltejs/svelte/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/sveltejs/svelte/compare/v3.43.0...v3.49.0)
+
+---
+updated-dependencies:
+- dependency-name: svelte
+  dependency-type: indirect
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>"
+"Bump json5 from 1.0.1 to 1.0.2 (#8175)
+
+Bumps [json5](https://github.com/json5/json5) from 1.0.1 to 1.0.2.
+- [Release notes](https://github.com/json5/json5/releases)
+- [Changelog](https://github.com/json5/json5/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/json5/json5/compare/v1.0.1...v1.0.2)
+
+---
+updated-dependencies:
+- dependency-name: json5
+  dependency-type: indirect
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>"
+"Bump qs from 6.5.2 to 6.5.3 (#8090)
+
+Bumps [qs](https://github.com/ljharb/qs) from 6.5.2 to 6.5.3.
+- [Release notes](https://github.com/ljharb/qs/releases)
+- [Changelog](https://github.com/ljharb/qs/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/ljharb/qs/compare/v6.5.2...v6.5.3)
+
+---
+updated-dependencies:
+- dependency-name: qs
+  dependency-type: indirect
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>"
+"chore(deps-dev): bump vite from 4.5.0 to 4.5.1 (#9800)
+
+Bumps [vite](https://github.com/vitejs/vite/tree/HEAD/packages/vite) from 4.5.0 to 4.5.1.
+- [Release notes](https://github.com/vitejs/vite/releases)
+- [Changelog](https://github.com/vitejs/vite/blob/v4.5.1/packages/vite/CHANGELOG.md)
+- [Commits](https://github.com/vitejs/vite/commits/v4.5.1/packages/vite)
+
+---
+updated-dependencies:
+- dependency-name: vite
+  dependency-type: direct:development
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>"
+docs: fix typo in `Action` jsdoc (#9254)
+"fix: correct each block update index type (#9425)
+
+* fix: correctly handle index within each block updates
+
+* changeset"
+"chore: split $.each into $.each_keyed/$.each_indexed (#9422)
+
+* Split $.each into $.each_keyed/$.each_indexed
+
+* Add changeset
+
+* Update .changeset/quiet-camels-mate.md
+
+* Fix typo
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+"fix: address runtime effect issues (#9417)
+
+* Fix runtime effect issues
+
+* Prettier
+
+* Add changeset
+
+* Fix operations
+
+* Update .changeset/khaki-mails-draw.md
+
+* more tweaks
+
+* more tweaks
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+"chore: remove selector api (#9426)
+
+* chore: remove selector api"
+"fix: support dynamic attributes containing call expressions (#9443)
+
+Fixes #9403. We weren't taking into account the containment of call expressions logic before."
+"fix: ensure keyed fallback to indexed (#9441)
+
+Fixes #9408. Ensures that if we have a key that matches the index, that we fallback to using an indexed each block."
+"fix: tighten up event attributes and hoisting logic (#9433)
+
+- add event delegation to spread_attributes
+- add event attributes to spread
+- don't delegate when bindings/actions on the same element in order to preserve backwards compatibility of ordering
+- don't hoist identifiers when one of them is used in an event that is not delegateable
+
+---------
+
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+"fix: address bug in before/after update (#9448)
+
+* fix: address bug in before/after update
+
+fix: address bug in before/after update
+
+* Add changeset
+
+* use every instead of filter - more explicit and enables early-exit from the loop
+
+* Update logic and comment
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"chore: make DOM operations lazily init (#9468)
+
+* chore: make DOM operations lazyily init
+
+* cleanup types
+
+* cleanup types
+
+* cleanup types
+
+* Update packages/svelte/src/internal/client/operations.js
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+
+* single line annotations
+
+* remove unnecessary coercion
+
+* group statements by type
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"Code golf each transitions (#9476)
+
+* chore: improve code size of transitions
+
+* Add changeset"
+"Revert ""fix: address bug in before/after update"" (#9480)
+
+* Revert ""fix: address bug in before/after update (#9448)""
+
+This reverts commit 9eb969ddd4b41275a8f3bbb9a4662482d2d9bcd6.
+
+* add changeset"
+"fix: ensure we visit assignments during compilation (#9511)
+
+* fix: add missing visit for expressions
+
+* fix: add missing visit for expressions
+
+* Add test"
+"fix: address unowned propagation signal issue (#9510)
+
+* fix: address unowned propagation signal issue
+
+* Add comments"
+"fix: handle intro global transition propagation correctly (#9515)
+
+* fix: stop propagating global intros
+
+* fix: stop propagating global intros
+
+* add test"
+chore: tune signals for better runtime perf (#9529)
+"chore: more signal fine-tuning (#9531)
+
+* chore: opt for two signal data-structures to reduce memory usage"
+"fix: address intro transition bugs (#9528)
+
+* fix: address intro transition bugs
+
+* fix: address intro transition bugs"
+"chore: rename internal object properties (#9532)
+
+* chore: rename internal object properties
+
+chore: rename internal object properties
+
+order properties and add comments
+
+add missing remove_in_transitions
+
+* jsdoc"
+chore: more transition code-golfing (#9536)
+"fix: adjust event delegation heuristics (#9581)
+
+Fixes #9561"
+"chore: add inline new class warning (#9583)
+
+* chore: add inline new class warning
+
+* Address feedback
+
+* address feedback
+
+* more tests"
+"feat: add $effect.active rune (#9591)
+
+* chore: add $effect.active rune
+
+* chore: add $effect.active rune"
+"fix: handle undefined bubble events (#9614)
+
+Fixes #9610"
+"chore: untrack keyed validation logic (#9618)
+
+* untrack validation logic
+
+* chore: untrack keyed validation logic"
+"fix: correctly assign bind:this with multiples (#9617)
+
+* fix: correctly assign bind:this with multiples
+
+* better fix
+
+* better fix
+
+* lint
+
+* lint
+
+* Update packages/svelte/src/internal/client/render.js
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+fix: apply correct snippet scope (#9623)
+"fix: improve member expression mutation logic (#9625)
+
+* fix: improve member expression mutation logic
+
+* cleanup
+
+* Update .changeset/moody-frogs-exist.md
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+fix: apply keyed validation only for keyed each (#9641)
+"fix: improve each block index handling (#9644)
+
+* fix: improve each block index handling
+
+* format"
+"feat: add $effect.root rune (#9638)
+
+* feat: effect-root-rune
+
+feat: add $effect.root rune
+
+update doc
+
+update doc
+
+fix validation
+
+* cleanup logic
+
+* Update sites/svelte-5-preview/src/routes/docs/content/01-api/02-runes.md
+
+* address feedback
+
+---------
+
+Co-authored-by: Rich Harris <richard.a.harris@gmail.com>"
+chore: remove redundant hydration code (#9698)
+fix: improve infinite loop capturing (#9721)
+"fix: improve template text node serialization (#9722)
+
+fix: improve template text node serialization"
+"fix: ensure computed props are cached with derived (#9757)
+
+Fixes #9751"
+"fix: ensure event handlers containing arguments are not hoisted (#9758)
+
+* fix: ensure event handlers containing arguments are not hoisted
+
+* add test
+
+* handle rest arguments"
+"fix: allow duplicate snippet declaration names (#9759)
+
+Fixes #9756"
+fix: ensure transitions properly cancel on completion (#9778)
+"fix: ensure proxied array length is updated (#9782)
+
+* fix: ensure proxied array length is updated
+
+* fix: ensure proxied array length is updated
+
+* add test
+
+* lint"
+"feat: add unstate utility function (#9776)
+
+* feat: add unstate utility function
+
+* Update packages/svelte/src/internal/client/proxy/proxy.js
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+
+* update docs
+
+* add class support
+
+* oops
+
+* lint
+
+* fix docs
+
+* remove symbol and class support
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+Co-authored-by: Rich Harris <richard.a.harris@gmail.com>"
+"fix: ensure generate guards against keywords (#9790)
+
+* fix: ensure generate guards against keywords
+
+* changeset
+
+* lint
+
+* Update .changeset/old-flies-jog.md
+
+---------
+
+Co-authored-by: Rich Harris <richard.a.harris@gmail.com>"
+fix: tweak invalid dollar prefix rules around function args (#9792)
+"fix: improve consistency issues around binding invalidation (#9810)
+
+* co
+
+* Add comment"
+"fix: improve non state referenced warning (#9809)
+
+* fix: improve non state referenced warning
+
+* add test"
+"fix: better handle unowned derived signals (#9832)
+
+* fix: better handle unowned derived signals
+
+* format
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+fix: ensure computed props are wrapped in derived (#9835)
+fix: improve signal consumer removal logic (#9837)
+fix: improve each block with animate (#9839)
+fix: improve each key animations (#9842)
+"fix: support dynamic transition functions (#9844)
+
+* fix: support dynamic transition functions
+
+* add test
+
+* lint
+
+* load dynamic code lazily
+
+load dynamic code lazily
+
+load dynamic code lazily"
+"fix: handle event hoisting props referencing (#9846)
+
+* fix: handle event hoisting props referencing"
+fix: ensure action function returns object (#9848)
+"chore: improve each block fast-path heuristic (#9855)
+
+* chore: improve each block fast-path heuristic
+
+* chore: improve each block fast-path heuristic"
+"fix: ensure class constructor values are proxied (#9888)
+
+* fix: ensure class constructor values are proxied
+
+* debugger"
+fix: improve each block index handling (#9889)
+fix: correctly reflect readonly proxy marker (#9893)
+fix: improve html tag svg behaviour (#9894)
+"fix: improve unstate type definition (#9895)
+
+* fix: improve unstate type definition
+
+* tweak
+
+* tweak"
+fix: better support for top-level snippet declarations (#9898)
+fix: improve props aliasing (#9900)
+"fix: improve $inspect batching (#9902)
+
+* fix: improve $inspect batching
+
+* fix dev bug
+
+* simplify
+
+* simplify"
+chore: improve readonly prop messaging (#9901)
+fix: improve attribute directive reactivity detection (#9907)
+"fix: improve whitespace handling (#9912)
+
+revert"
+fix: improve each block fallback handling (#9914)
+add test (#9917)
+fix: better handle array property deletion reactivity (#9921)
+"fix: improve event delegation handler hoisting (#9929)
+
+* fix: improve event delegation handler hoisting
+
+* fixes"
+"feat: add $state.frozen rune (#9851)
+
+* feat: add $state.raw rune
+
+fix typo
+
+fix typo
+
+* add more tests, fix example
+
+* add other test
+
+* change to $state.readonly
+
+* fix readme
+
+* fix validation
+
+* fix more
+
+* improve types
+
+* improve REPL
+
+* switch to $state.frozen
+
+* update docs
+
+* update docs
+
+* update docs
+
+* Update .changeset/dry-clocks-grow.md
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+
+* Update packages/svelte/src/internal/client/runtime.js
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+
+* Update packages/svelte/src/internal/client/runtime.js
+
+* docs
+
+* Update sites/svelte-5-preview/src/routes/docs/content/01-api/02-runes.md
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+
+---------
+
+Co-authored-by: Rich Harris <richard.a.harris@gmail.com>
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"fix: ensure if block is executed in correct order (#10053)
+
+* fix: ensure if block is executed in correct order
+
+* alternative approach
+
+* improve algo
+
+* optimize
+
+* lint"
+"fix: bail-out event handler referencing each index (#10063)
+
+* fix: bail-out event handler referencing each index
+
+* lint
+
+* ts
+
+* types"
+"fix: improve text node output (#10081)
+
+* fix: improve text node output
+
+* revert"
+"fix: loosen input in button error (#10083)
+
+The validation exists to error on html that would result in the browser repairing it, causing hydration errors. input is never moved, so we can remove it from the array
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+fix: improve key block reactivity detection (#10092)
+fix: improve internal signal dependency checking logic (#10111)
+"fix: apply key animations on proxied arrays (#10113)
+
+* fix: apply key animations on proxed arrays
+
+* fix: apply key animations on proxed arrays
+
+* fix: apply key animations on proxed arrays"
+"fix: allow transition undefined payload + microtask queue handling (#10117)
+
+* fix: allow transition undefined payload
+
+* cleanup
+
+* cleanup
+
+* add microtask queue handling"
+fix: improve signal consumer tracking behavior (#10121)
+"fix: ensure nested blocks are inert during outro transitions (#10126)
+
+* fix: ensure nested blocks are inert during outro transitions
+
+* lint"
+fix: improve ssr template literal generation (#10127)
+"fix: improve animation heuristics (#10119)
+
+* fix: improve animation heuristics
+
+better fix
+
+better fix
+
+* improve-animation
+
+* more fixes
+
+* use rAF
+
+* feedback
+
+* fix absolute positioning
+
+* fix more
+
+* revert
+
+* more fixes"
+"fix: further animation transition improvements (#10138)
+
+* fix: further animation transition improvements
+
+* clever hack"
+"fix: improve outro behavior with transitions (#10139)
+
+* fix: improve outro behavior with transitions
+
+* debug
+
+* revise"
+"fix: improve template literal expression output generation (#10147)
+
+* fix: improve template literal expression output generation
+
+* do not proxy template literal"
+"fix: improve ssr template code generation (#10151)
+
+* fix: improve ssr template code generation
+
+* lint"
+fix: improve how transitions are handled on mount (#10157)
+"fix: improve code generation (#10156)
+
+* fix: improve code generation
+
+* format"
+fix: revise inert transition logic (#10159)
+"fix: improve intro transitions on dynamic mount (#10162)
+
+* fix: improve intro transitions on dynamic mount
+
+* fix: improve intro transitions on dynamic mount
+
+* fix: improve intro transitions on dynamic mount"
+fix: prevent transition action overfiring (#10163)
+"fix: improve event handling compatibility with delegation (#10168)
+
+* fix: improve event handling compatibility with delegation
+
+* fix
+
+* lint
+
+* add test"
+fix: improve nested effect heuristics (#10171)
+"fix: ensure topological order for render effects (#10175)
+
+* fix: ensure topological order for render effects
+
+* optimize"
+"fix: ensure unstate() only deeply applies to plain objects and arrays (#10191)
+
+* fix: ensure unstate() only deeply applies to plain objects and arrays
+
+* tweak"
+"fix: improve transition outro easing (#10190)
+
+* fix: improve transition outro easing
+
+* Update tests"
+"fix: improve invalid nested interactive element error (#10199)
+
+* fix: improve invalid nested interactive element error
+
+* add test
+
+* revise"
+"fix: add compiler error for invalid <p> contents (#10201)
+
+* fix: add compiler error for invalid <p> contents
+
+* add test"
+"fix: ensure derived signals properly capture consumers (#10213)
+
+* fix: ensure derived signals properly capture consumers
+
+* fix: ensure derived signals properly capture consumers"
+fix: correctly apply event.currentTarget (#10216)
+"fix main (#10237)
+
+* fix main
+
+* fix main"
+chore: improve should_proxy_or_freeze logic internally (#10249)
+"chore: improve $state static reference warning heuristics (#10275)
+
+* chore: improve $state static reference warning heuristics
+
+* fix bug
+
+* update test
+
+* lint"
+"[fix] only read static value for rel attribute validation (#8003)
+
+fixes #7994"
+breaking: set verison to 4, remove engines.pnpm and bump engines.node to >=16 (#8566)
+feat: add workflow to trigger ecosystem-ci from svelte PRs (#8571)
+fix: changeset publish script isn't called release anymore (#8711)
+"chore: update playgrounds/demo  (#9666)
+
+* chore: update playgrounds/demo to exclude svelte from being optimized and generate an App.svelte so first run doesn't throw
+
+* chore: fix format"
+"[docs] Improve grammar (#7923)
+
+* [docs] Improve grammar
+
+* revert spelling changes
+
+Co-authored-by: tanhauhau <lhtan93@gmail.com>"
+"chore: update svelte.dev README (#8894)
+
+* Fix svelte.dev running locally instructions
+
+After a clean clone, the `svelte` package needs to have its `/types`
+directory generated for `pnpm dev` to work
+
+* Update note about REPL
+
+Firefox supports `import` in workers since version 114; confirmed that
+the REPL works with `pnpm dev` in Firefox"
+"[fix] Spread component props immutably during SSR (#8176)
+
+By passing an empty object literal as first argument to Object.assign we can avoid having objects spread as props on a component being mutated during SSR.
+
+Fixes #8171"
+fix: update link to `LICENSE.md` (#9296)
+docs: update Typescript elements link (#8938)
+docs: fix link to changelog (#8845)
+docs: fix typo in August newsletter (#9100)
+"docs: fix typo in Svelte 5 preview docs (#9507)
+
+intead -> instead"
+feat: make `preserveComments` effective in DOM renderer (#7182)
+docs: fix typo (#8966)
+"fix: Regression `itemscope` as `boolean_attribute` (#8414)
+
+Microdata are a strange set of attributes which are ONLY defined in markup, and have no relationship to the underlying Document Object Model node. As such programmatically defining an element and setting a property on it with a given Microdata attribute will not work:
+https://codepen.io/iambrosius/full/jOvXBBG
+
+One can read more about microdata here: https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata
+
+The fix is to remove itemscope being a boolean attribute, because that opts into a transformation as a DOM property, which is wrong."
+docs: add missing on:click to immutable example (#10079)
+[chore] upgrade node to 18 (#8018)
+"[docs] update outdated SvelteKit release info (#8128)
+
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>"
+Update license year (#8227)
+[docs] fix typo in getting started (#7918)
+[docs] fix transition direction options (#8133)
+chore: update changelog (#8390)
+site: make REPL user menu keyboard accessible (#8831)
+"site: add view transitions and transition blog title (#9164)
+
+* Add view transitions and transition blog title
+
+* Scope view transitions to /blog routes"
+"site: add view transitions blog post (#9162)
+
+* site: add view transitions blog post
+
+* Link live demo
+
+* Apply suggestions from code review
+
+Co-authored-by: Geoff Rich <4992896+geoffrich@users.noreply.github.com>
+
+---------
+
+Co-authored-by: Rich Harris <richard.a.harris@gmail.com>"
+"Version Packages (next) (#8709)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#8733)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#8772)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (#8799)
+
+
+---------
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+"Version Packages (#8855)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (#8877)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (#8902)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (#8911)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (#8925)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (#8928)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (#9008)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (#9037)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (#9096)
+
+
+---------
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+"Version Packages (#9121)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (#9293)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (#9380)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#9382)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#9386)
+
+* Version Packages (next)
+
+* Update packages/svelte/CHANGELOG.md
+
+---------
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+Co-authored-by: Rich Harris <richard.a.harris@gmail.com>"
+"Version Packages (next) (#9431)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#9481)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#9492)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#9519)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#9530)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#9535)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#9542)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#9576)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#9607)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#9633)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#9642)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#9650)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#9692)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#9707)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#9736)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#9753)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#9771)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#9807)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#9833)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#9847)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#9856)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#9899)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#9913)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#9922)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#10005)
+
+* Version Packages (next)
+
+* Apply suggestions from code review
+
+---------
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+Co-authored-by: Rich Harris <richard.a.harris@gmail.com>"
+"Version Packages (next) (#10052)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#10070)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#10112)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#10122)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#10137)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#10148)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#10158)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#10164)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#10188)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"Version Packages (next) (#10202)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+"fix: update onMount type to allow async to return any (#8714)
+
+
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+[docs] style directive tutorial (#7161)
+"[docs] Fix statement about the order of bind: and on: (#7357)
+
+* Fix statement about order of bind: and on:
+
+* It's just an example
+
+* Revert and modify
+
+* Update site/content/docs/02-template-syntax.md
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+
+* Update site/content/docs/02-template-syntax.md
+
+Co-authored-by: Tan Li Hau <tanhauhau@users.noreply.github.com>
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>"
+"[feat] `|important` modifier for style directive (#7489)
+
+* important modifier for style directive
+
+* docs
+
+* Exclude third param if false
+third param for set_style is optional
+
+* Remove unused test
+
+Runtime test doesn't work because of weird behaviour of computed style
+the puppeteer test should cover it
+
+* remove unnecessary test
+
+Co-authored-by: tanhauhau <lhtan93@gmail.com>"
+"[chore] patch bump tslib (#8015)
+
+closes #8013
+ref: microsoft/tslib#160"
+"fix: retain style directive value after style attribute is updated (#7610)
+
+fixes #7475"
+"chore: produce single bundle for runtime with multiple entrypoints (#8504)
+
+* single runtime bundle
+
+* formatting
+
+* dedupe output options
+
+* fix tests apparently
+
+* skip writeBundle for cjs build
+
+* revert quotes
+
+* remove manualChunks
+
+* some node16 module resolution compliance
+
+* disable minifyInternalExports (doesn't really make sense for a library since users'
+build step will do it again anyway)"
+"fix: ensure version is typed as string instead of the literal __VERSION__ (#8502)
+
+fixes #8498"
+"docs: fix type signature for StartStopNotifier (#8509)
+
+It used the Subscriber type to represent the set callback and the
+Unsubscriber to represent the cleanup callback. But the names made
+it confusing what it was for."
+"fix: interpolated style directive updates properly with spread (#8505)
+
+fixes #8438"
+chore: convert puppeteer tests to playwright (#8577)
+make the triangle bot less verbose
+"chore: swap mocha with vitest (#8584)
+
+Also swap out the require hook hacks with a less-hacky-but-still-somewhat-hacky loader for the Svelte files
+
+---------
+
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>
+Co-authored-by: Rich Harris <richard.a.harris@gmail.com>"
+chore(test): tidy up html equal (#8599)
+chore(test): link compiler directly from source (#8612)
+"chore: speed up test execution (#8598)
+
+- shard runtime tests for better use of Vite's test parallelization
+- merge custom element and other browser tests to run in one test suite and use esbuild in it
+- on some setups only generate code output when test fails"
+fix flaky test
+chore(test): move some error tests out of runtime (#8600)
+chore(test): use esm output for Svelte files (#8614)
+chore(test): fix path to compiler
+fix: store types and some other internal types that got lost in the conversion (#8658)
+"chore: playground (#8648)
+
+* initialize playground
+
+* pnpm up
+
+* tidy up git ignore
+
+* remove fluff
+
+* format
+
+* rm readme
+
+* fix jsconfig error
+
+* add skip-worktree instructions
+
+* reload hack
+
+* simplify
+
+* use rollup
+
+* ughh
+
+* add flag for SSR
+
+* ...
+
+* simplify further
+
+* configure launch.json
+
+* add debugger info to readme
+
+* remove vm modules flag
+
+* use replaceAll instead of replace
+
+* tidy up
+
+* fix: make it run
+
+* add watch to launch config"
+"fix: export ComponentType (#8694)
+
+* fix: export ComponentType
+
+* ughh
+
+* changeset"
+"fix: derived types (#8700)
+
+* fix: derived store types
+
+* changeset"
+chore: fix release workflow (#8716)
+"fix: warn on boolean compilerOptions.css (#8710)
+
+* warn on boolean compilerOptions.css
+
+* changeset"
+"fix: expose types for all TS resolution modes, fix SvelteComponent export (#8721)
+
+also add some legacy import paths which should be changed in usage sites ASAP
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+chore: cleanup generated files (#8749)
+chore: exclude sites from build script (#8754)
+"chore(site): fix build (#8762)
+
+* fix: 404 instead of 500
+* omit legacy entrypoints
+* fix prefetch"
+"feat: smaller destructor chunk (#8763)
+
+technically a breaking change because someone with a mutation observer could rely on the order of operations
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+chore: move tests to the correct place (#8773)
+"chore: deindent cjs output for compiler (#8785)
+
+makes package size a tiny bit smaller"
+"feat: attach Svelte major version info to window global (#8761)
+
+Can be opt out by setting discloseVersion to false
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>"
+docs: use `@latest` on the migrate command (#8814)
+"chore: fix site deploys (#8878)
+
+force Vercel to rebuild sharp everytime - it's prone to breaking at some point and we'd have to clear the cache"
+site: fix docs "edit this page" link (#8888)
+fix: correct contributors image file name (#8942)
+docs: update svg transition example for v4 (#8947)
+"fix: handle patterns in destructured literals (#8871)
+
+fixes #8863
+
+---------
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>"
+"chore: upgrade dependencies (#8939)
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>"
+"docs: update migration guide bundler conditions section (#8965)
+
+#8953 / #8961 
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+"fix: css sourcemap generation with unicode filenames (#9120)
+
+* fix: css sourcemap generation with unicode filenames
+
+* format"
+chore: render head output in playground (#9123)
+"docs: fix easings example glitch (#9114)
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>"
+chore: fix another playground path (#9144)
+"fix: head duplication when binding is present (#9124)
+
+fixes #7879
+fixes #4982"
+"fix: do not add module declared variables as dependencies (#9122)
+
+closes #5943"
+chore: document init parameters (#9118)
+"fix: false reactive component warning (#9094)
+
+fixes #9082"
+"fix: add snippet symbol to children prop (#9395)
+
+* add snippet symbol to children prop
+
+* fix error message for snippet validation
+
+* changeset"
+"enable dev mode for preview repl (#9393)
+
+* enable dev mode for preview repl
+
+* format
+
+* also add dev mode toggle for compiler options
+
+* whoops"
+"chore: shave off more bytes (#9540)
+
+* shavings
+
+* dro unused max safe int
+
+* get rid of array_ref and object_ref
+
+* extract STATUS_MASK
+
+* fix test
+
+* revert is_controlled change
+
+* more run_all"
+fix repl (#9720)
+"chore: do not emit invalidate_effect for select synchronization (#9830)
+
+in runes mode"
+chore(repl): hide globals (#10125)
+"fix: allow ts casts in bindings (#10181)
+
+fixes #10179
+
+---------
+
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+docs: changed path color for better visibility with dark theme (#8957)
+"Fix bug with transition draw when delay is passed (#8094)
+
+Signed-off-by: Gus Wezerek <gustav.wezerek@nytimes.com>
+
+Signed-off-by: Gus Wezerek <gustav.wezerek@nytimes.com>
+Co-authored-by: Gus Wezerek <gustav.wezerek@nytimes.com>"
+docs: Remove duplicate note (#8843)
+"fix: apply transition_in/out to svelte:element with local transition (#8865)
+
+fixes #8233"
+"fix: `svelte:component` spread props change not picked up (#9006)
+
+fix #9003, amend #8946 (comment)"
+"fix: allow child element with slot attribute within svelte:element (#9038)
+
+fix #9018"
+"site: remove banner (#9620)
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>"
+[docs] use npm create instead of npm init (#7641)
+"[feat] improve error message for animate used in a non-keyed each block (#6838)
+
+* introdcued new compiler error
+
+* making use of newly created compiler error
+
+* updated test for animation not in keyed each
+
+* removed unneeded conditions"
+"feat: add back `<svelte:document>`  (#7149)
+
+Closes #3310
+
+---------
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+"[docs] remove v2 -> v3 converter mention (#7597)
+
+Was never finished"
+[feat] add convenience type for `ComponentEvents` (#7702)
+"[chore]: store regexp as variable instead of defining it inline (#7716)
+
+* store regexp as variable instead of defining it inline
+
+* fix naming of `regex_quoted_value`
+
+* some more variables
+
+* optimize `.replace() calls
+
+* restore formatting changes
+
+* optimize `parser.*` calls
+
+* small refactor
+
+* optimize `.test() calls
+
+* rename some variables
+
+* fix tests
+
+* rename pattern variables
+
+* extract common regexes into `patters.ts`
+
+* rename variables to use snake_case
+
+* fix trim"
+"[chore] add missing types to `compiler/compile/render_dom` functions and variables (#7777)
+
+* add missing types to `compiler/compile/render_dom` functions and variables
+
+* add `DetachingOrNull`
+
+* fis `is_head`"
+"breaking: improve types for `createEventDispatcher` (#7224)
+
+
+---------
+
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+"fix: transition parameters are not reactive (#9836)
+
+* test: add tests of transitions in new runtime
+
+* fix: move evaluation of props
+
+* format
+
+* add changeset"
+"fix: check url and search input field values before updating (#7111)
+
+Fixes #7027"
+"docs: update dialog example (#8200)
+
+* feat: update dialog example
+
+* button always autofocusses, allows us to simplify
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+Update introduction/dynamic-attributes (#7498)
+docs: format "MutationObserver" as code (#8830)
+[docs] link content to site directory (#7688)
+"docs: fix tutorial edit link (#8812)
+
+Fixes #8811"
+docs: update `create` -> `createRoot` (#9750)
+docs: add console output instruction to tutorial (#8336)
+"fix(repl): runes bottom banner overlapping fixed (#9238)
+
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+"Update CHANGELOG.md (#8809)
+
+Fix misformatted links in 4.0.0 changelog"
+docs: mention escaping of curly braces (#8560)
+docs: add display block to todos tutorial (#8951)
+"site: todos in `animate` tutorial render weird due to typo (#8952)
+
+* svelte.dev/tutorial/animate - todos render weird on chrome without display: block;
+
+* fix typo"
+docs: link to MDN page on void elements (#8261)
+docs: format `window.navigator.onLine` reference as code (#8262)
+"docs: clarify bindings for `<select multiple>` (#8260)
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>"
+docs: clarify meaning of "this" in a comment (#8478)
+docs: clarify statement about initial values for props (#8477)
+"[docs] Remove draft status of setting-up-your-editor blog-entry to fix broken link (#7310)
+
+* site: add missing word
+
+* comment out link to setting up your editor blog post
+
+Co-authored-by: tanhauhau <lhtan93@gmail.com>"
+"[docs] Fix 3.52.0 a11y warning in svelte-self tutorial (#7988)
+
+* fix svelte 3.52 a11y warning
+
+* replace span with button and drop on:keyup"
+"docs: fix typo in snippets doc (#10030)
+
+""Declare"" should be ""Declared"" (past tense)"
+feat: `trusted-types` CSP compatibility for Web Components (#8135)
+"chore: skip generating $.proxy() calls for more expressions (#9979)
+
+* chore: skip emitting $.proxy() calls for more expressions
+
+* Update pretty-ties-help.md
+
+---------
+
+Co-authored-by: Dominic Gannaway <trueadm@users.noreply.github.com>"
+"docs: update Keyed Each Blocks tutorial (#8188)
+
+log which element is removed
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+"chore: remove btoa fallback (#8783)
+
+Since we're targeting NodeJS >16 we don't need any Buffer fallback as it's now built in globally from that version onwards."
+"chore: Remove the need for `node:process` (#8795)
+
+performance.now() exist in all envs we support now"
+"feat: add GamepadEventHandler type  (#9861)
+
+Add GamepadEventHandler type for window.addEventListener `gamepadconnected` and `gamepaddisconnected`"
+Fix error in example in 03-typescript.md (#9001)
+"[feat] add security warning for anchor element (rel attribute) (#6289)
+
+* add security warning for anchor element (rel attribute)
+
+* manage more case for security warnings on anchor (aplocks, false positive ...)
+
+* remove noopener checks as noreferrer imples noopener
+
+Co-authored-by: tanhauhau <lhtan93@gmail.com>"
+"fix: derived store restarting when unsubscribed from another store with a shared ancestor (#8368)
+
+Fixes #8364
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+"fix: ensure `bind:offsetHeight` updates (#8096)
+
+fixes #4233 by calling the callback after the iframe loads, which may be asynchronous
+
+---------
+
+Co-authored-by: Yuichiro Yamashita <xydybaseball@gmail.com>"
+[docs] fix typo (#8180)
+[chore] fix spelling and typos (#7974)
+[docs] fix tutorial/keyed-each-blocks (#7218)
+[docs] fix typo "bellow" vs "below" (#7955)
+[chore] Update link to feature request template (#7992)
+"docs: add parenthesis back to regex literal example (#9027)
+
+* fix: added parenthesis to literal notation example
+
+* add prettier-ignore
+
+---------
+
+Co-authored-by: gtmnayan <50981692+gtm-nayan@users.noreply.github.com>"
+"fix: provide a workaround for `unsafe-inline` CSP that also works in Safari (#7800)
+
+This changes the inserted style element for transitions to initially include the string '/* empty */'. This allows you to work around requiring unsafe-inline CSP discussed in #6662 by adding a hash to your CSP:
+
+'sha256-9OlNO0DNEeaVzHL4RZwCLsBHA8WBQ8toBp/4F5XV2nc='
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+docs: add `<svelte:document>` example (#8387)
+"fix: style directive not updating when style attribute is present and style directive is updated via an object prop. fixes #9185 (#9187)
+
+fixes #9185.
+
+I narrowed down the issue to the bug surfacing when we use object properties to update style attributes and directives. This fix removes the size check (because a single object will be of size 1 but can affect n attributes/directives via its properties).
+
+In addition, the order of the OR is switched as the earlier condition has some reactive assignments which are not run in the current order when style_changed_var is truthy."
+"fix: html tag hydration: regard empty claimed_nodes array as content mismatch  (#9184)
+
+fixes #6832"
+Fixed #8828 (#8832)
+"[fix] support @layer (#7514)
+
+* add test
+
+* add layer to apply check"
+"[feat]: Add A11y aria-proptypes check (#6978)
+
+* Add aria prop type list
+
+* feat: check aria attribute types
+
+* feat: add proptype tests
+
+* Add documentation
+
+* use aria-query
+
+Co-authored-by: Nurassyl Zekenov <nurassyl@snoonu.com>
+Co-authored-by: mka_882@yahoo.com <mka_882@yahoo.com>
+Co-authored-by: tanhauhau <lhtan93@gmail.com>
+Co-authored-by: David Mosher <davidmosher@gmail.com>"
+"docs: fix minor typos (#8268)
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>"
+chore: adding default for disclose version (#8874)
+fix: update link for doucmentation & sites in README (#9014)
+"[fix] textContent should not be set for <template> element. (#7297)
+
+* [fix] textContent should not be set for <template> element.
+
+* tidy - name convetion. minor refactor extract ""is template"" check to a variable and replace usages.
+
+* test template with text content
+
+* update html in test"
+"fix: account for `<template>` tag in `{@html}` (#7364)
+
+Ensure innerHTML for template is done on template element
+fixes #7315
+fixes #7319
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+"fix: correct typos in variable names (#8257)
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>"
+"fix: support es2022 class features (#8355)
+
+Follow up to #8349. We also have to bump the parsing ECMAScript version here. Fixes #6900, fixes #6592."
+"fix: generate type definition with nullable types (#8924)
+
+This results in `undefined` and `null` being added explicitly in places which is crucial in some situations"
+"feat: move svelteHTML to load the correct svelte/element (#9070)
+
+ Make IntrinsicElements extends SvelteHTMLElements
+so it can be extend with declare module
+converting to module so it can extend without needing another type alias
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+"[docs] Add clarification on how reactivity works (#7819)
+
+* Add clarification on how reactivity works
+
+Based on the fact that there are multiple issues were opened related to a perceived bug on the reactive variables, I thought it would be good to add a clarification on the docs. Part of the text is taken from [this comment](https://github.com/sveltejs/svelte/issues/7818#issuecomment-1230374639) that I found super useful.
+
+* Reword based on PR comments"
+"docs: fix attribute example in basic markup (#8813)
+
+
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+"[fix] render of svg elements when using svelte:element (#7695)
+
+* fixed render statement for svg when using  svelte:element
+
+* removed unecessary stuff in test"
+"[fix]: remove double up initialization on svelte:element (#8142)
+
+* fixed double up initialization on svelte:element elements
+
+* updated test and fixed bug
+
+* update other svelte:element test
+
+* removed whitespace
+
+* refactor
+
+* correctly update expected ouput resulting from #7938
+
+* remove .solo
+
+Co-authored-by: Yuichiro Yamashita <xydybaseball@gmail.com>"
+"fix: add transform-origin to SVGAttributes (#9326)
+
+See https://svgwg.org/svg2-draft/styling.html#PresentationAttributes"
+[fix] remove duplicate semicolon (#7534)
+[fix] harden attribute escaping during ssr (#7530)
+docs: fix fly animation description (#8236)
+"[fix] Fix hydration duplicate `svelte:head` tag issue with `@html` expressions and nested components (#7745)
+
+* Fix hydration duplicate `svelte:head` tag issue with `@html` and nested components #7444 #6463
+
+* - Changed comment style to HEAD_${head_id}_START and HEAD_${head_id}_END
+- Improved claim logic
+- Changed tests accordingly"
+[feat] Compiler option css: 'none' support (#7914)
+"docs: Updated button width in documentation/reactivity (#8897)
+
+* Updated button width in documentation/reactivity
+
+Fixed button width in order to avoid the changing width of the button in the result when the text changes from 'time' to 'times'
+
+* Made style changes as per the guidelines
+
+* Replicated changes made in app-a to app-b
+
+* Update App.svelte
+
+* Update App.svelte
+
+---------
+
+Co-authored-by: Puru Vijay <47742487+PuruVJ@users.noreply.github.com>"
+"feat(a11y): add click-events-have-key-events rule (#5073)
+
+* feat(a11y): add click-events-have-key-events rule
+
+Signed-off-by: mhatvan <markus_hatvan@aon.at>
+
+* Fine-tune click-events-have-key-events rule
+
+Signed-off-by: mhatvan <markus_hatvan@aon.at>
+
+* Implement PR feedback
+
+Signed-off-by: Markus Hatvan <markus_hatvan@aon.at>
+
+* Implement PR feedback
+
+Signed-off-by: Markus Hatvan <markus_hatvan@aon.at>
+
+* slight refactor to use existing utils
+
+* update docs
+
+* fix rebase conflicts
+
+Signed-off-by: mhatvan <markus_hatvan@aon.at>
+Signed-off-by: Markus Hatvan <markus_hatvan@aon.at>
+Co-authored-by: tanhauhau <lhtan93@gmail.com>
+Co-authored-by: dsfx3d <dsfx3d@gmail.com>"
+"a11y: Add role-has-required-aria-props rule (#5852)
+
+* Check required props for ARIA roles
+
+* Test required ARIA props check
+
+* Properly indent with tabs in test
+
+* swtich to use aria-query
+
+* fix validation test
+
+* update docs
+
+Co-authored-by: tanhauhau <lhtan93@gmail.com>"
+[feat] add SveltePreprocessor utility type (#7742)
+"[fix] omit a11y warning for native checkbox/radio inputs (#7838)
+
+* [fix] omit a11y warning for native checkbox/radio inputs
+
+Fixes #7837
+
+* align implementation with eslint-plugin-jsx-a11y
+
+Co-authored-by: tanhauhau <lhtan93@gmail.com>"
+[fix] "not interactive" -> "noninteractive" (#7930)
+"feat: `container` query support via `css-tree` extension (#8275)
+
+Closes #6969
+
+As discussed there, container query support is quite useful to add to Svelte as it is now broadly available with Firefox releasing support imminently w/ FF v110 this upcoming week (~Feb 14th). Chrome has had support since ~Aug '22. The central issue is that css-tree which is a dependency for CSS AST parsing is significantly lagging behind on adding more recent features such as container query support. Ample time has been given to the maintainer to update css-tree and I do have every confidence that in time css-tree will receive a new major version with all sorts of modern CSS syntax supported including container queries. This PR provides an interim solution for what Svelte needs to support container queries now."
+Closes #5876. Adds single value function support to media queries and media query range syntax / MQ level 4 support. (#8430)
+"docs: Expand testing FAQ section (#8205)
+
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>"
+"docs: describe that `bind:value` creates a two-way binding (#8311)
+
+
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+"chore: optimize `get_amount_class_specificity_increased` (#9853)
+
+* Optimaze
+
+* pnpm format
+
+---------
+
+Co-authored-by: Mike <prince-poley@yandex.ru>"
+"fix: Don't break in `attributeChangedCallback` if `$$component` does not exist yet (#8701)
+
+Since the custom element class waits one tick before instantiating the `$$component` field, it's possibly undefined when `attributeChangedCallback` is called."
+docs: fix else if blocks on tutorial (#9336)
+"[fix] named slots breaks svelte-ignore comments (#8105)
+
+* [fix] Named slots breaks svelte-ignore comments
+
+Fixes #8075
+
+* test: add tests
+
+* refactor
+
+* refactor test
+
+Co-authored-by: mojinming <mojinming@cmcm.com>
+Co-authored-by: Yuichiro Yamashita <xydybaseball@gmail.com>"
+"[docs] update port in ""Svelte for new developers"" blog. (#7697)
+
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>"
+"feat: add support for {@const} inside snippet block (#9904)
+
+* check for snippet block
+
+* change the error msg
+
+* edit tests
+
+* changeset
+
+* test"
+"fix: improve script `lang` attribute detection (#10046)
+
+closes #10038"
+"fix: add types for popover attributes and events (#10041)
+
+closes #10036, this also moves the HTMLDetailsElement toggle event to its interface as it was conflicting with HTMLElement popover toggle event.
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+"fix: improve parsing of `:nth-of-type(xn+b)` (#9970)
+
+closes #9969
+
+this also fixes the following along the way:
+the + in nth-of-type(+xn-b) would be parsed as a combinator.
+
+invalid cases like these are not allowed anymore:
+
+b(+/-)b
+-ax
+-ax-b
+-b"
+"fix: improve style parser whitespace handling (#10077)
+
+allow whitespace, allow comments
+fixes #10073"
+"fix: infer `svg` namespace correctly (#10027)
+
+Add recursive check for logic blocks, ignore things such as ConstTags and Comments
+closes #10025
+
+---------
+
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+fix: Remove Security Message (#7959)
+"feat: implement a11y `aria-activedescendant-has-tabindex` (#8172)
+
+#820"
+"feat: add a11y `role-supports-aria-props` (#8195)
+
+#820
+
+---------
+
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+"fix: make svelte-ignore work above components  (#8338)
+
+Fixes #8082, where svelte-ignore somehow does not pick up the reactive-component warning.
+
+The issue on this problem is that the map_children function suppresses warnings and errors while traversing AST nodes as src/compiler/compile/nodes classes. However, the reactive-component warning is called in src/compiler/compile/render_dom/wrappers/InlineComponent/index.ts, and its warnings are not suppressed in map_children. Thus, we need to extract ignores and suppress here separately."
+"feat: add a11y `no-noninteractive-element-to-interactive-role` (#8167)
+
+Part of #820"
+"fix: object destructring picks up literal properties (#8357)
+
+Part of #6609"
+"fix: object destructuring picks up computed properties (#8386)
+
+fixes #6609. Prior related PR: #8357"
+"feat: add a11y `interactive-supports-focus` (#8392)
+
+#820"
+"fix: resolve computed_prop_# collision (#8418)
+
+Fixes #8417
+
+The issue is that unpack_destructuring in each blocks, await blocks, and @const tags were making computed_props independently. This causes computed_props_# to conflict when each blocks were used with @const tags, or await blocks and @const tags, or consecutive @const tags together. Therefore, one solution is to use component.get_unique_name to, well, make unique names and never get conflicts."
+"feat: add a11y `no-noninteractive-element-interactions` (#8391)
+
+#820"
+"fix: relax no-redundant-roles implementation (#8536)
+
+Deals with the no-redundant-roles part of #8529
+
+There was an erroneous check which compares the element name with the current role. This fix brings no-redundant-roles closer to the original eslint-jsx implementation"
+"fix: Array rest property fix (#8553)
+
+Fixes #8552"
+"fix: array rest destructuring in markup (#8555)
+
+Fixes #8554
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+"fix: treat slots as if they don't exist when using CSS adjacent and general sibling combinators (#8422)
+
+Fixes #8284.
+
+The problem is that the <slot> element is treated as an actual element, and for this purpose, we have to treat them as if they don't exist. More specifically, we treat all slot fallback children nodes on the same level as the slot's non-slot siblings."
+"fix: error when animation directive is on component (#8641)
+
+Fixes #8639"
+"docs: use pnpm and new commands to check the code base (#8667)
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>"
+"fix: Make sure 'func' doesn't clash with destructured contexts (#8840)
+
+Fixes: #8753"
+"fix: svelte:component evaluates props once (#8946)
+
+Fixes #6634"
+"fix: remove let variable from select binding dependencies (#8969)
+
+Fixes #2943
+
+The issue linked above invalidates a variable that is not defined in <script> but instead is defined as a let: variable, which does not make sense to invalidate, therefore, this PR exists."
+"fix: add test so #6009 doesn't regress (#9075)
+
+closes #6009"
+"fix: issue with assiging prop values as defaults of other props (#9985)
+
+* Fix issue on assiging prop values as defaults of other props
+
+* Prettier
+
+* Add changeset"
+"fix: Backtick now displays with templates (#9973)
+
+* Add a test for backtick in template
+
+* Put sanitize_template_string and use it everywhere
+
+* Prettier
+
+* Add changeset"
+"fix: Add some tests to avoid regression on #8559 (#9956)
+
+* Add some tests to avoid regression
+
+* Add runes test and remove extra tests"
+"fix: support destructurings containing await (#9962)
+
+Adds a traversion mechanism to found out if destructured expressions contain await
+Fixes #9686
+Fixes #9312
+Fixes #9982"
+"fix: prevent undefined value when remount keyed input element with spread props (#7699)
+
+Fixes: #7578
+
+When remounting a keyed input element (e.g. because the element order has changed) with spread properties, the input value gets undefined. This has happened because data_value is updated before remounting and it won't contain a value for input-value (because the value hasn't changed). When calling mount() an undefined value was assigned because of a missing check."
+"Recursively check label children for input control (#5323)
+
+* Recursively check label children for input control
+
+* Add another test case
+
+* Update snapshot
+
+* clean up test
+
+Co-authored-by: tanhauhau <lhtan93@gmail.com>"
+[docs] Add comment about generating a Svelte project without Kit (#8115)
+"docs: Don't recommend TypeScript type assertions for reactive declarations (#8824)
+
+strictly speaking that's not the same and could hide some type errors"
+"fix: Add data-* to svg attributes (#9036)
+
+* Add data-* to svg attributes
+
+* Create twelve-suits-drive.md"
+"feat: add vim mode to repl (#9135)
+
+* feat: add vim mode to repl
+
+* fix adding url search params
+
+---------
+
+Co-authored-by: Puru Vijay <devpuruvj@gmail.com>"
+"fix: allow svelte:self in snippets (#9439)
+
+* fix: allow svelte:self in snippets
+
+* Create funny-wombats-argue.md"
+"fix: allow member access on directives (#9462)
+
+fixes #9445"
+[feat] Add options w/ direction to transitions (#8068)
+"breaking: send in/out to transition fn (#8318)
+
+Instead of ""both"", which doesn't make sense at that point."
+"docs: Remove old redundant text (#8893)
+
+The quote marks were already removed in db2d07f2360191b68022ba3e64a86401edd15296"
+"fix: This makes the indeterminate HTML attribute available for use. Fixes #9176. (#9180)
+
+Fixes #9176. This adds indeterminate to the list of HTMLAttributes so that one can use it without receiving an error."
+docs: update text color in animate example (#9374)
+docs: make transition global in deferred transition example (#9020)
+"fix: css in examples directory. (#8977)
+
+* Update App.svelte
+
+CSS Fixes in span element.
+
+* Add space
+
+---------
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>"
+feat: Initialize sites
+Merge remote-tracking branch 'origin/master' into sites
+"[feat]: Move svelte.dev here (#8237)
+
+* Push
+
+* Remove `rootDir`
+
+* Use tsconfig instead of jsconfig
+
+* Push recent changes
+
+* Better dark mode
+
+* empty commit to try and trigger a deploy
+
+* bump kit
+
+* Fix site-kit dep
+
+* Comment out blurb
+
+* Update site-kit to 3.2.1
+
+* Externalise sourcemap-codec
+
+* Install sourcemap-codec as dep
+
+---------
+
+Co-authored-by: Rich Harris <hello@rich-harris.dev>"
+Add blurb back in
+"feat: multi-page docs (#8253)
+
+* Rename markdown to blog
+
+* Multi-page docs
+
+* Ignore missing ID for now
+
+* heading
+
+* Add code snippets(temporary)
+
+* /docs redirects to introduction
+
+* Remove ukraine petition
+
+* OnThisPage
+
+* Remove console.log
+
+* Update deps
+
+* Fix accessibility warning
+
+* Update site-kit"
+Merge remote-tracking branch 'origin/master' into sites
+Merge remote-tracking branch 'origin/sites' into sites
+"feat: Proper dark mode (#8274)
+
+* Push
+
+* Update svelte REPL
+
+* Light mode fixes
+
+* Fox height issues
+
+* Moar dark mode fixes
+
+* More changes
+
+* Fix zen mode height issue"
+Update deps
+Merge remote-tracking branch 'origin/master' into sites
+"feat: search and backlink compatability (#8286)
+
+* Copy the right files
+
+* Finish search
+
+* FIx accessibility issues
+
+* Add original site compatibility back in
+
+* Remove console.log
+
+* Reorganize imports
+
+* Minor refactor
+
+* Fix undefined heading issue
+
+* Replace state on redirect
+
+* Don't redirect to docs/introduction from navbar
+
+* Cleanup search
+
+* Cleanup some more(html entities)
+
+* Remove console log
+
+* Minor style tweaks
+
+* Put search in middle"
+Merge remote-tracking branch 'origin/master' into sites
+Merge remote-tracking branch 'origin/master' into sites
+Merge remote-tracking branch 'origin/master' into sites
+fix(site-2): styles (#8288)
+Fix search
+"feat(site-2): Local tutorial (#8427)
+
+* feat(docs): Local tutorial
+
+* Refactor some stuff
+
+* Better error handling
+
+* Fix search imports
+
+* Prerender tutorial
+
+* try prerendering hack
+
+* fix super stupid display hidden bug
+
+* Shorten the rendered URL
+
+* Shorten URL code even more"
+"feat(site-2): Local examples (#8431)
+
+* feat(docs): Local tutorial
+
+* Refactor some stuff
+
+* Better error handling
+
+* Fix search imports
+
+* Prerender tutorial
+
+* try prerendering hack
+
+* fix super stupid display hidden bug
+
+* Shorten the rendered URL
+
+* Shorten URL code even more
+
+* Prerender in svelte.config.js
+
+* Refactor
+
+* Fix ScreenToggle dark mode styles
+
+* Initial POC
+
+* Rvert to old hack
+
+* Fix svelte-document.jpg"
+"feat(site-2): Fully remove api.svelte.dev (#8432)
+
+* Localize the examples dependents
+
+* Localize FAQ
+
+* Try to fix examples API
+
+* Remove examples api
+
+* Prerender, use vercel adapter, disable PUT action for now
+
+* Don't call get_examples_data on top
+
+* Move repl PUT to its own routew
+
+* Don't prerender REPL page
+
+* Change console warn
+
+* Prerender tutorial the smart way
+
+* Use getContext in root
+
+* work around some weird content encoding glitch
+
+* Try the pre-generate route
+
+* Apply the suggestions
+
+* Fix embed examples
+
+* Remove comment
+
+* remove commented-out code
+
+* Update sites/svelte.dev/src/routes/_components/Demo.svelte
+
+Co-authored-by: Rich Harris <richard.a.harris@gmail.com>
+
+* remove unused code
+
+* add note to self, remove ts-ignore
+
+* move adapter-vercel to devDependencies
+
+* remove some unused deps
+
+* huh we need flexsearch after all? weird
+
+* we need sourcemap-codec as well  what the hell. are these deps missing from a dep?
+
+---------
+
+Co-authored-by: Rich Harris <git@rich-harris.dev>
+Co-authored-by: Rich Harris <richard.a.harris@gmail.com>"
+"feat(site-2): Update links, move blog out of SK folder to content (#8289)
+
+* Update links
+
+* Move blog to site/content
+
+* Update site/content/docs/02-component-format.md
+
+* Fix docs links
+
+* Add global prettierrc
+
+* Auto format
+
+* Fix git merge artifact
+
+* Fix errors
+
+* Update html to svelte(remaining ones)
+
+* Add 2 blog posts
+
+* Modify prettierrc
+
+* Minor design fix
+
+* Switch package lock to spaces, prettier ignore
+
+* Regenerate package lock
+
+* prettier format
+
+* Update deps
+
+* Hack the build into working
+
+* add missing blog post
+
+---------
+
+Co-authored-by: Rich Harris <richard.a.harris@gmail.com>
+Co-authored-by: Rich Harris <git@rich-harris.dev>"
+chore(site-2): Update deps
+"feat(site-2): Split docs (#8435)
+
+* Update links
+
+* Move blog to site/content
+
+* Update site/content/docs/02-component-format.md
+
+* Fix docs links
+
+* Add global prettierrc
+
+* Auto format
+
+* Fix git merge artifact
+
+* Fix errors
+
+* Update html to svelte(remaining ones)
+
+* Add 2 blog posts
+
+* Modify prettierrc
+
+* Minor design fix
+
+* Switch package lock to spaces, prettier ignore
+
+* Regenerate package lock
+
+* prettier format
+
+* Push
+
+* Remove console.logs
+
+* Minor fixes
+
+* Fix search
+
+* Fix heading <code> style
+
+* Fix search some more
+
+* Code cleanup
+
+* Update deps
+
+* Move content around
+
+* Allow drafts
+
+* Redirect logic
+
+* Don't render anything on docs if /docs
+
+* Shorten the regex patterns
+
+* Fix some more
+
+* Hack the build into working
+
+* Modernize docs links
+
+* Add content to introduction
+
+* Modify the content
+
+* fix content links
+
+* Reduce duplication in redirect regex
+
+* Differences from Kit page
+
+* Fix link
+
+* Make OnThisPage visible on all docs
+
+* Misc changes
+
+* Move differences page to introduction
+
+* Run prettier
+
+* Prerender examples api routes
+
+* Modify introdution page
+
+* replace positions of readonly and get
+
+* Minor blog style enhancement
+
+---------
+
+Co-authored-by: Rich Harris <richard.a.harris@gmail.com>"
+feat(site-2): Make blog logic consistent with other content (#8447)
+docs(site-2): CJS to ESM for code snippets (#8449)
+chore: Update deps
+chore: Run prettier
+Update readme (#8453)
+fix: Old site redirects
+feat: Add home slot
+Update deps
+Fix broken links
+Merge remote-tracking branch 'origin/master' into sites
+chore: run npm install
+"feat(site-2): Remove legacy site-kit stuff (#8501)
+
+* Push
+
+* Update site-kit
+
+* Update svelte REPL
+
+* Remove rollup URL
+
+* meh
+
+* Modify sidebar colors
+
+* Bump deps"
+Merge
+chore: Upgrade to Vite 4.3 (#8524)
+Merge remote-tracking branch 'origin/master' into sites
+chore: Rebuild package.lock
+"feat(site-2): Use entries (#8570)
+
+* Push
+
+* Image stuff
+
+* Use entries
+
+* Update deps
+
+* Update kit"
+fix(site-2): Remove marked warnings (#8574)
+"feat(site-2): TS in docs (#8452)
+
+* Commit
+
+* Push working type generation code
+
+* Fix type gen script invocation
+
+* Delete type-info.js
+
+* Change build script
+
+* Recreate package lock
+
+* mkdir generated
+
+* Add type references to some pages
+
+* Add TS-able snippets to docs examples
+
+* Fix some stuff
+
+* Add types to individual functions
+
+* Add to store page
+
+* Refactor compile-types.js
+
+* Move ts sourcefile stuff to compile-types
+
+* Remove commented code
+
+* Half attempt at export aliases
+
+* Add
+
+* Fix, add disclaimer for svelte/internal
+
+* Disable /docs prerendering
+
+* Remove internals page
+
+* Remove redundant stuff
+
+* Make search work with it
+
+* Fix compile types logic
+
+* Add file: comment,
+
+* Add two-slash to docs pages
+
+* Get type links working
+
+* Remove console.log
+
+* Add action module
+
+* Fix actions logic
+
+* Make compile-types logic more robust
+
+* Bump site-kit
+
+* Fix gitignore
+
+* Use moduleResolution bundler
+
+* Don't apply shiki-twoslash to auto generated code snippets from render
+
+* Recreate package lock
+
+* Make TSbpage undraft
+
+* Fix svelte component types
+
+* Remove console.log
+
+* No more sveltekit
+
+* Make regex smarter
+
+* Update sites/svelte.dev/scripts/type-gen/compile-types.js
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+
+* Rebuild package lock
+
+* Remove commented out code
+
+* Update deps
+
+* Remove $$_attributes
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+chore: Reinstall packages
+"fix(site-2): Restyle home page (#8454)
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>"
+feat(site-2): New REPL (#8545)
+Merge remote-tracking branch 'origin/version-4' into sites
+fix: Post merge pnpm issues
+chore(site-2): Update deps
+site -> documentation (#8585)
+"feat(site-2, v4): pnpm workspace (#8586)
+
+* Push
+
+* Push"
+chore(site-2): Run prettier
+"feat(site-2): Accessibility (#8579)
+
+* Push
+
+* Push
+
+* Fix Contents order
+
+* Skip link to left sidemenu
+
+* Add text class
+
+* use top-nav slot
+
+* Improve imagetools
+
+* Fix aria-label
+
+* Bump site-kit"
+fix(site-2): Use dynamic LOCAL_SVELTE_PATH
+Merge remote-tracking branch 'origin/version-4' into sites
+"feat(site-2): docs edit button (#8593)
+
+* Add edit button
+
+* Update deps"
+Merge remote-tracking branch 'origin/version-4' into sites
+Merge remote-tracking branch 'origin/version-4' into sites
+chore: Commit internal_exports
+Merge remote-tracking branch 'origin/version-4' into sites
+fix: preprocess snippet
+Gitignore compiler.js files
+chore: Remove from gitignore
+"feat(site-2): New Markdown renderer, FAQ, Blog, Tutorial, Docs, (#8603)
+
+* New FAQ, new renderer
+
+* Push blog stuff
+
+* Fix blog posts
+
+* Add tutorial to be rendered
+
+* Update documentation/content/blog/2023-03-09-zero-config-type-safety.md
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+
+* Update documentation/content/blog/2023-03-09-zero-config-type-safety.md
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+
+* Revamp a lot of renderer, make it (soft) compatible with sveltekit
+
+* Remove markdown types
+
+* Clean up faq +page
+
+* Document stuff
+
+* Make the options more explicity
+
+* chore(site-2): Restructure docs pt 2 (#8604)
+
+* Push
+
+* Update readme
+
+* Push
+
+* inor accessibility fix
+
+* minr stuff
+
+* Add prepare
+
+* Run prettier
+
+* Remove test script
+
+* pnpm update
+
+* Update sites/svelte.dev/src/routes/examples/[slug]/+page.svelte
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+
+* Update sites/svelte.dev/package.json
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+chore: rerun pnpm install
+fix: lint errors
+chore: Remove svelte v3 files
+docs(site-2): Action, TypeScript (#8588)
+Merge remote-tracking branch 'origin/version-4' into sites
+Merge remote-tracking branch 'origin/version-4' into sites
+Merge remote-tracking branch 'origin/version-4' into sites
+"fix(site-2): REPL component and minor fixes (#8616)
+
+* Push
+
+* Update deps
+
+* Allow autocomplete on embed pages
+
+* nit
+
+* Remove unnecessary import
+
+* Remove debug
+
+* Update deps stiff
+
+* Cleanup
+
+* Remove prerender auto from repl page
+
+* Use REPL next.4"
+Merge remote-tracking branch 'origin/version-4' into sites
+chore(site-2): What's new in Svelte June 2023 (#8705)
+Try?
+Merge version-4
+"feat: Better docs nav (#8605)
+
+* DocsNav
+
+* Push
+
+* Nav title on each page
+
+* Install jridgewell sourcemap codec. Why it breaking suddenly
+
+* Use theme store
+
+* Use $nav_title
+
+* use $page.data.nav_title
+
+* Disable global prerendering
+
+* Fix Suppprters section
+
+* use new method
+
+* Initially hidden nav functionality
+
+* Minor fixes
+
+* Simplify into one single nav
+
+* Accomodate to the bottom nav
+
+* Minor fixes
+
+* nit
+
+* Add selected to other pages as well
+
+* New way of passing to navbar
+
+* Code cleanup
+
+* Directly pass list instead of components
+
+* 14 days
+
+* Fix comment
+
+* Discord icon
+
+* Bump site-kit finally"
+fix(site-2): docs redirect page (#8718)
+Merge remote-tracking branch 'origin/version-4' into sites
+"fix(site-2): Home page styles(pt 2) (#8720)
+
+* DocsNav
+
+* Push
+
+* Nav title on each page
+
+* Install jridgewell sourcemap codec. Why it breaking suddenly
+
+* Use theme store
+
+* Use $nav_title
+
+* use $page.data.nav_title
+
+* Disable global prerendering
+
+* Fix Suppprters section
+
+* use new method
+
+* Initially hidden nav functionality
+
+* Minor fixes
+
+* Simplify into one single nav
+
+* Accomodate to the bottom nav
+
+* Minor fixes
+
+* nit
+
+* Add selected to other pages as well
+
+* New way of passing to navbar
+
+* Code cleanup
+
+* Directly pass list instead of components
+
+* 14 days
+
+* Fix comment
+
+* Discord icon
+
+* Homepage styles
+
+* More tweak, extra CTA
+
+* Bigger lowercase tagline
+
+* Preload overpass for transitions demo
+
+* Tweak for ipad air
+
+* Remove letter spacing
+
+* simplify home page styles (#8738)
+
+* simplify
+
+* fix
+
+* slightly better use of space
+
+* tiny bit more room
+
+* read the docs
+
+* crop image
+
+* very minor tweak
+
+* another breakpoint
+
+* tweak
+
+* actually it works down to 1400px
+
+---------
+
+Co-authored-by: Rich Harris <git@rich-harris.dev>
+
+---------
+
+Co-authored-by: Rich Harris <richard.a.harris@gmail.com>
+Co-authored-by: Rich Harris <git@rich-harris.dev>"
+chore: lockfile 6.1
+"fix(site-2): Prerender nav data (#8747)
+
+* simplify nav
+
+* updates
+
+* fix link
+
+* Dont need this anymore
+
+* Push
+
+* minor re-arrangement
+
+---------
+
+Co-authored-by: Rich Harris <git@rich-harris.dev>"
+"chore(sites): update deps (#8752)
+
+* Push
+
+* Fix Ts 5.1 type generation error"
+"docs: normalize svelte compiler headings (#8755)
+
+The `svelte.` prefix was a remnant of CJS times"
+"docs(sites): Auto-generated CompileOptions (#8756)
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+"fix: update/add links to website (#8729)
+
+
+---------
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+"fix(sites): fix REPL styles (#8770)
+
+* Push
+
+* Push fixes
+
+* Delete vite.config.js.timestamp-1687278902174-a59162675b2f6.mjs
+
+* Remove log
+
+* bump site-ki"
+chore: Bump REPL to 0.5.0-next.5
+"fix(site): update tutorial links (#8780)
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>"
+"feat(site): site-kit renderer (#8757)
+
+* Push
+
+* Weirdass fix
+
+* Unified renderer
+
+* Move a bit
+
+* Accomodate to new renderer
+
+* update site-kit
+
+* bump site-kit
+
+* Fix script
+
+* Bump site-kit
+
+---------
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>"
+fix: Flash of inAccurate coloR Theme (FART)
+"fix(site): renderer new link format (#8787)
+
+* adapt
+
+* Uncomment
+
+* Push
+
+* Bump site-kit"
+"fix: search scrolling (#8792)
+
+* Push basic stuff
+
+* Push
+
+* Bump site-kit"
+"fix(site): Style fixes (#8794)
+
+* Style fixes
+
+* Bump site-kit"
+chore(site): Reorganize imports
+"fix: Apps styles (#8797)
+
+* Push
+
+* Remove reference to $types"
+fix(repl): components -> files
+fix(site): REPL gist as string again
+REPL default to v4
+"fix: Use version 4 for examples and tutorial (#8806)
+
+* Use version 4 for examples and tutorial
+
+* Remove redundant import"
+chore: Update REPL to 0.5.0-next.6
+chore: update REPL to 0.5.0-next.7
+chore(site): update deps
+"blog: post about svelte.dev overhaul (#8766)
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+Co-authored-by: gtmnayan <50981692+gtm-nayan@users.noreply.github.com>"
+chore: update REPL to 0.5.0-next.10
+chore: REPL 0.5.0-next.11
+feat: On this page mobile (#8782)
+"feat(site): Deploy to edge (#8873)
+
+* Try edge
+
+* Fix errors
+
+* Improvements
+
+* Minor fixes
+
+* Simplify docs layout logic
+
+* Persist session true
+
+* try regions all
+
+* Push new promise-based infra
+
+* pnpm install
+
+* Remote debugging
+
+* Refine
+
+* try to disable prerender for examples
+
+* text
+
+* Weird hack
+
+* url
+
+* log params
+
+* Try param matcher
+
+* try some restructuring
+
+* Leftover
+
+* remove console log
+
+* More async, remove node-fetch
+
+* Fix
+
+* New fixes
+
+* Undo changes
+
+* back to site-kit next 18"
+"chore: Skip playwright instaling browsers (#8935)
+
+* Push
+
+* try npmrc route
+
+* Rootnpmrc
+
+* Add command to install chromium for running tests"
+chore: bump repl 0.5.0-next.12
+"chore(site): LightningCSS (#8929)
+
+* use lighteningcss
+
+* Update sites/svelte.dev/package.json
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+
+* Update vite
+
+* use browserlist
+
+---------
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>"
+Push (#8967)
+fix(site): Optimise contributors donors images (#8956)
+"chore: Try Section (#9059)
+
+* Commit
+
+* bump deps
+
+* remove redundant @types"
+"chore: Sitekit footer (#9072)
+
+* Push
+
+* Bump site-kit"
+"chore(sites): Bump deps (#9115)
+
+* Push
+
+* Bump deps
+
+* Bumps deps"
+"feat: Copy code button (#8995)
+
+* Push
+
+* Bump site-kit
+
+* Add headers to primary snippets
+
+* Update deps
+
+* Bump deos
+
+* redploy
+
+* Back to normal
+
+* Push
+
+* Bump deps
+
+* site: fix rendering of promise in deprecation warning (#9191)
+
+* copy: true
+
+* Bump site-kit
+
+* Use cache"
+"feat: OnThisPage blog (#9216)
+
+* feat: OnThisPage blog
+
+### Before submitting the PR, please make sure you do the following
+
+- [ ] It's really useful if your PR references an issue where it is discussed ahead of time. In many cases, features are absent for a reason. For large changes, please create an RFC: https://github.com/sveltejs/rfcs
+- [ ] Prefix your PR title with `feat:`, `fix:`, `chore:`, or `docs:`.
+- [ ] This message body should clearly illustrate what problems it solves.
+- [ ] Ideally, include a test that fails without this PR but passes with it.
+
+### Tests and linting
+
+- [ ] Run the tests with `pnpm test` and lint the project with `pnpm lint`
+
+* Bump site-kit
+
+* Add content"
+site: fix scroll restoration (#9222)
+"[fix]destroy empty component (#7492)
+
+* fix: destroy non-fragment element such as empty components
+
+* fix: fragment property of Empty Component is set as true in dev mode, inconsistent with production mode
+
+* chore: revert 'removal' of component.compile_options.dev
+
+* feat: add test for destroying empty component
+
+* chore: update typechecking callback
+
+* chore: revert fragment dev checks
+
+* chore: remove unnecessary comment
+
+* chore: update test for empty-component-destroy
+
+* fix: revert back the patching of console.log
+
+* use before_test and after_test
+
+Co-authored-by: qinmu <magenta2127@mail.com>
+Co-authored-by: tanhauhau <lhtan93@gmail.com>"
+"[fix] handle arrow function on slot inside svelte:fragment (#7667)
+
+Fixes #7485"
+"feat: improve duplicate key error for keyed each blocks (#8411)
+
+Closes #8410
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+"[fix] static svelte:element not replaced with tag in production mode (#7938)
+
+* [fix] static svelte:element not replaced with tag in production mode
+
+* [fix] static svelte:element not replaced with tag in production mode
+
+* add optimization of static <svelte:element> and fix a bug
+
+Co-authored-by: Yuichiro Yamashita <xydybaseball@gmail.com>"
+"fix: allow $store to be used with changing values including nullish values (#7947)
+
+fixes #7555
+breaking change: derived now throws an error if you pass falsy values
+
+---------
+
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+"docs: mention `{#await}` on non-Promise values short-circuiting to the fullfilled branch (#9324)
+
+Fixes #9323"
+"Faster SSR (#5701)
+
+Co-authored-by: Conduitry <git@chor.date>
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>"
+"[docs] update getting started info (#7573)
+
+* update getting started info
+
+* Update site/content/blog/2019-04-16-svelte-for-new-developers.md
+
+Co-authored-by: Conduitry <git@chor.date>
+
+* Update site/content/tutorial/01-introduction/07-making-an-app/text.md
+
+Co-authored-by: gtmnayan <50981692+gtm-nayan@users.noreply.github.com>
+
+* Update site/content/blog/2019-04-16-svelte-for-new-developers.md
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+Co-authored-by: Conduitry <git@chor.date>
+Co-authored-by: gtmnayan <50981692+gtm-nayan@users.noreply.github.com>"
+remove blog content. it now lives in sites repo (#8117)
+empty commit to try and trigger a deploy
+Merge branch 'master' into sites
+"move FAQ to /docs/faq (#8672)
+
+* move FAQ to /docs/faq
+
+* remove some more junk
+
+* simplify
+
+* escape
+
+* move redirect to server, prerender
+
+---------
+
+Co-authored-by: Rich Harris <git@rich-harris.dev>"
+"tidy up `sites` branch (#8671)
+
+* remove VITE_API_BASE stuff
+
+* use site-kit <Section> component
+
+* remove comments
+
+---------
+
+Co-authored-by: Rich Harris <git@rich-harris.dev>"
+Merge branch 'version-4' into sites
+"tweak docs content (#8675)
+
+* update intro
+
+* update tutorial links
+
+* unitalicise code spans
+
+* Update documentation/docs/01-getting-started/01-introduction.md
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+
+* Update documentation/docs/01-getting-started/01-introduction.md
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+
+* Update documentation/docs/01-getting-started/01-introduction.md
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+
+* Update documentation/docs/01-getting-started/01-introduction.md
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+
+---------
+
+Co-authored-by: Rich Harris <git@rich-harris.dev>
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>"
+"Generate type declarations with `dts-buddy` (#8702)
+
+* use dts-buddy
+
+* remove debug output
+
+* remove existing type generation script
+
+* fix package.json
+
+* update gitignore
+
+* bump dts-buddy
+
+* remove unused action entry point
+
+* add svelte/compiler and svelte/types/compiler/preprocess modules
+
+* bump dts-buddy
+
+* annoying
+
+* changeset
+
+* bump dts-buddy
+
+* get rid of .d.ts files
+
+* another one
+
+* Update packages/svelte/package.json
+
+Co-authored-by: gtmnayan <50981692+gtm-nayan@users.noreply.github.com>
+
+---------
+
+Co-authored-by: Rich Harris <git@rich-harris.dev>
+Co-authored-by: gtmnayan <50981692+gtm-nayan@users.noreply.github.com>"
+"Fix types (#8727)
+
+* put comment in right place
+
+* bump dts-buddy
+
+---------
+
+Co-authored-by: Rich Harris <git@rich-harris.dev>"
+"update type generation script (#8712)
+
+* chore: playground (#8648)
+
+* initialize playground
+
+* pnpm up
+
+* tidy up git ignore
+
+* remove fluff
+
+* format
+
+* rm readme
+
+* fix jsconfig error
+
+* add skip-worktree instructions
+
+* reload hack
+
+* simplify
+
+* use rollup
+
+* ughh
+
+* add flag for SSR
+
+* ...
+
+* simplify further
+
+* configure launch.json
+
+* add debugger info to readme
+
+* remove vm modules flag
+
+* use replaceAll instead of replace
+
+* tidy up
+
+* fix: make it run
+
+* add watch to launch config
+
+* Generate type declarations with `dts-buddy` (#8702)
+
+* use dts-buddy
+
+* remove debug output
+
+* remove existing type generation script
+
+* fix package.json
+
+* update gitignore
+
+* bump dts-buddy
+
+* remove unused action entry point
+
+* add svelte/compiler and svelte/types/compiler/preprocess modules
+
+* bump dts-buddy
+
+* annoying
+
+* changeset
+
+* bump dts-buddy
+
+* get rid of .d.ts files
+
+* another one
+
+* Update packages/svelte/package.json
+
+Co-authored-by: gtmnayan <50981692+gtm-nayan@users.noreply.github.com>
+
+---------
+
+Co-authored-by: Rich Harris <git@rich-harris.dev>
+Co-authored-by: gtmnayan <50981692+gtm-nayan@users.noreply.github.com>
+
+* fix: export ComponentType (#8694)
+
+* fix: export ComponentType
+
+* ughh
+
+* changeset
+
+* fix: derived types (#8700)
+
+* fix: derived store types
+
+* changeset
+
+* Version Packages (next) (#8709)
+
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+
+* update type generation script
+
+* remove unused stuff
+
+* fix: changeset publish script isn't called release anymore (#8711)
+
+* chore: remove prepare script (#8713)
+
+* chore: fix release workflow (#8716)
+
+* More readable, Fix $$_attributes
+
+* Fix types (#8727)
+
+* put comment in right place
+
+* bump dts-buddy
+
+---------
+
+Co-authored-by: Rich Harris <git@rich-harris.dev>
+
+* build types
+
+* add svelte/compiler types
+
+* remove prepare script
+
+* fix
+
+* typo
+
+* squelch errors
+
+* Add svelte and kit to twoslash's types field
+
+* squelch more stuff
+
+* Add errors to account for new types
+
+* Remove deps
+
+* formatting tweak
+
+* fix linting, maybe
+
+* the hell
+
+* gah
+
+* Fix types a bit
+
+* bump dts-buddy
+
+* pnpm generate in dev mode
+
+* Cache again
+
+* reduce index
+
+* bump dts-buddy
+
+* remove comment
+
+---------
+
+Co-authored-by: gtmnayan <50981692+gtm-nayan@users.noreply.github.com>
+Co-authored-by: Rich Harris <git@rich-harris.dev>
+Co-authored-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+Co-authored-by: Dominik G <dominik.goepel@gmx.de>
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+Co-authored-by: Puru Vijay <devpuruvj@gmail.com>"
+"bump site-kit (#8731)
+
+Co-authored-by: Rich Harris <git@rich-harris.dev>"
+"Bump site-kit (#8742)
+
+* bump site-kit
+
+* bump again
+
+---------
+
+Co-authored-by: Rich Harris <git@rich-harris.dev>"
+"simplify nav (#8736)
+
+* simplify nav
+
+* updates
+
+* fix link
+
+* Dont need this anymore
+
+* bump
+
+---------
+
+Co-authored-by: Rich Harris <git@rich-harris.dev>
+Co-authored-by: Puru Vijay <devpuruvj@gmail.com>"
+"fix terminal (#8748)
+
+Co-authored-by: Rich Harris <git@rich-harris.dev>"
+"add teaser page (#9210)
+
+* add teaser page
+
+* add origin
+
+* host card externally
+
+* fix
+
+* remove unused styles
+
+* redesign
+
+* black bg
+
+* fix og image
+
+* tweak font-sizes and alignment
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"introducing runes (#9227)
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"fix symlink (hopefully) (#9383)
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"fix: exclude internal props from spread attributes (#9384)
+
+* exclude internal props from spread attributes
+
+* changeset
+
+* tighten up
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"Fix diagnostics (#9385)
+
+* simplify a whole bunch of stuff
+
+* delete more unused stuff
+
+* fix diagnostics
+
+* prettier
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"fix runes mode indicator (#9388)
+
+* fix runes mode indicator
+
+* tidy up
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+lint
+"fix tsconfig.json (#9427)
+
+* fix tsconfig.json
+
+* prettier
+
+* another apparently-necessary fix
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"skip svelte.dev deploy. this may or may not work (#9424)
+
+* skip svelte.dev deploy. this may or may not work
+
+* try this
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"chore: use internal `get_descriptors` helper (#9389)
+
+* chore: use internal get_descriptors helper
+
+* tweak changeset
+
+* fix bad merge
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"Docs (#9449)
+
+* rename file
+
+* add snippet docs
+
+* add note on deprecation
+
+* they're not attributes
+
+* event docs
+
+* prettier
+
+* remove unnecessary div
+
+* Apply suggestions from code review
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+
+* make example less confusing
+
+* note breaking props.children change
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+add back launch config
+"fix: only escape attribute values for elements, not components (#9456)
+
+* only escape attribute values for elements, not components - closes #9454
+
+* changeset
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"treat `slot` the same as other props - closes #9455 (#9457)
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"fix: rework directive name handling (#9470)
+
+* move snapshot test to a runtime test
+
+* handle dynamic cases
+
+* huh
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"configure search.exclude (#9472)
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"fix: stringify attribute values before comparison (#9475)
+
+* fix: stringify attribute values before comparison
+
+* simplify
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"enforce treeshakeability (#9430)
+
+* enforce treeshakeability
+
+* fix
+
+* appease the dweeby little hall monitor
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"chore: add AST output to sandbox (#9488)
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"fix: emit useful error on invalid binding to derived state (#9497)
+
+closes #9495"
+"fix: only treat instance context exports as accessors (#9500)
+
+* failing test for #9499
+
+* limit export handling to instance context
+
+* changeset
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"feat: native TypeScript support (#9482)
+
+* add typescript support to parser
+
+* fix
+
+* unnecessary
+
+* various
+
+* transform assertions
+
+* tweak
+
+* prettier
+
+* robustify
+
+* fix
+
+* see if this fixes the prettier stuff
+
+* only parse ts in ts mode
+
+* fixes
+
+* fix
+
+* fix
+
+* fix
+
+* fix
+
+* more
+
+* check
+
+* changeset
+
+* allow type annotations on all contexts
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"set expression end to typeAnnotation end where appropriate (#9566)
+
+* set expression end to typeAnnotation end where appropriate
+
+* fix
+
+* woops
+
+* lint
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+"docs: document class state fields (#9563)
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"Typescript each indexed (#9567)
+
+* failing test
+
+* fix undefined index bug
+
+* Update packages/svelte/src/compiler/phases/1-parse/read/context.js
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+"fix: disallow static state fields (#9577)
+
+closes #9547"
+"fix: deconflict generated names against globals (#9570)
+
+fixes #9559"
+"generate AST first (#9587)
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+chore: bump esrap (#9590)
+"put nested class warning on the declaration, not the usage site (#9592)
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"chore: remove some unused code (#9593)
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"chore: better `get_rune` helper (#9594)
+
+* chore: add $effect.active rune
+
+* chore: add $effect.active rune
+
+* WIP
+
+* allow get_rune to return a keypath
+
+* oops
+
+---------
+
+Co-authored-by: Dominic Gannaway <dg@domgan.com>
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"`$effect.active` docs (#9598)
+
+* docs: $effect.active
+
+* link
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"chore: remove get_callee_name (#9595)
+
+no longer necessary with the enhanced get_rune function"
+"chore: reuse common templates (#9601)
+
+#9589 - add comment and space as reusable templates to save a few bytes. We can definitely take this idea further, but this is a base to iterate from.
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+"chore: bump esrap (#9649)
+
+* bump esrap
+
+* changeset
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"feat: ignore href when hydrating (#9662)
+
+* ignore href when hydrating
+
+* remove unused export keyword
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"feat: warn on referenced mutated nonstate (#9669)
+
+Walk the path and warn if this is a mutated normal variable that's referenced inside a function scope"
+"chore: improve output for `<svelte:element>` (#9648)
+
+- doesn't add spread_dynamic_element_attributes when there are no attributes  Unnecessary spread_dynamic_element_attributes call #9646
+- skips the child render function altogether if there is nothing to do"
+"chore: remove static value handling (#9571)
+
+The deleted code ensured that a static variable wouldn't update when it's in the same text expression as a reactive variable. We solved this through emitting a warning about this instead, marking it as undefined behavior."
+"rename dev script, update contributor guide and readme (#9673)
+
+* rename dev script, update contributor guide and readme
+
+* turns out we can do this!
+
+* increase accuracy
+
+* justify FILTER
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"`$inspect` rune (#9705)
+
+* feat: add $log rune
+
+* fix issues
+
+* fix issues
+
+* tune
+
+* avoid static state reference validation
+
+* work around unfortunate browser behavior
+
+* call it ExpectedError
+
+* cleanup
+
+* Fix docs
+
+* tweaks
+
+* tweaks
+
+* lint
+
+* repl, dev: true
+
+* repl dev mode
+
+* Update sites/svelte-5-preview/src/lib/Repl.svelte
+
+* squelch static-state-reference warning
+
+* simplify
+
+* remove redundant code
+
+* Update packages/svelte/src/main/ambient.d.ts
+
+Co-authored-by: Rich Harris <richard.a.harris@gmail.com>
+
+* Update packages/svelte/src/main/ambient.d.ts
+
+Co-authored-by: Rich Harris <richard.a.harris@gmail.com>
+
+* Update packages/svelte/src/main/ambient.d.ts
+
+Co-authored-by: Rich Harris <richard.a.harris@gmail.com>
+
+* only pause/trace on change
+
+* Update packages/svelte/src/main/ambient.d.ts
+
+* Update .changeset/chatty-hotels-grin.md
+
+* Update sites/svelte-5-preview/src/routes/docs/content/01-api/02-runes.md
+
+Co-authored-by: Rich Harris <richard.a.harris@gmail.com>
+
+* $log.break and $log.trace no-op during SSR
+
+* Update sites/svelte-5-preview/src/routes/docs/content/01-api/02-runes.md
+
+Co-authored-by: Rich Harris <richard.a.harris@gmail.com>
+
+* update test
+
+* improve break experience
+
+* fix ts
+
+* remove unnecessary if (DEV) checks - log runes are removed in prod
+
+* ensure hoisting doesnt mess up source maps
+
+* check visited for cyclical values
+
+* rename $log to $inspect, remove children
+
+* custom inspect function
+
+* implement custom inspect functions
+
+* changeset
+
+* update docs
+
+* only fire on change
+
+* lint
+
+* make inspect take a single argument
+
+* ugh eslint
+
+* document console.trace trick
+
+* demos
+
+* fix site
+
+---------
+
+Co-authored-by: Dominic Gannaway <dg@domgan.com>
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>
+Co-authored-by: Rich Harris <rich.harris@vercel.com>
+Co-authored-by: Dominic Gannaway <trueadm@users.noreply.github.com>"
+"correctly inspect derived values (#9731)
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"Proxied state (#9739)
+
+* magic objects
+
+* read length eagerly  triggers reconciliation
+
+* nested magic
+
+* tests
+
+* more tests
+
+* fix array memory leak
+
+* skipped, partially passing array test
+
+* Fix each
+
+revert bad changes
+
+* more 1337
+
+* eliminate closures
+
+* maybe this is unnecessary?
+
+* only create sources for own properties
+
+* more
+
+* rename stuff
+
+* shuffle things around
+
+* emit $.proxy
+
+* remove proxy helper from public API
+
+* only create sources for writable properties
+
+* update test
+
+* get tests passing
+
+* fix
+
+* remove state-not-mutated warning, which is no longer valid
+
+* track reassignments separately from mutations
+
+* update test - effects no longer fire on mutations unnecessarily
+
+* move util into utils file
+
+* move each logic into its own module; breathe sigh of relief
+
+* tweaks
+
+* more tweaks
+
+* improve runtime
+
+* fix mistake
+
+* ensure we proxy when assigning to state
+
+* fix test
+
+* handle frozen
+
+* create sources when reading proxy properties inside deriveds
+
+* only mutate in legacy mode
+
+* add immutable to transform state
+
+* remove unused second argument to derived
+
+* remove unused second argument to source, and runtime immutable option to createRoot (not sure what that was doing there?)
+
+* oops, backwards
+
+* dedicated binding.kind for legacy reactive imports
+
+* avoid using prop_source in more cases. bit hacky, could be tidier, but it works
+
+* distinguish between source and mutable_source
+
+* remove immutable option from mount
+
+* remove unused apparatus around immutable option
+
+* deprecate immutable
+
+* fix
+
+* tweak
+
+* better default value handling
+
+* remove unnecessary exports
+
+* whitespace is free
+
+* remove obsolete symbol from proxy
+
+* cleanup ts
+
+* improve runtime perf by removing version reads in has()
+
+* add missing proxy call
+
+* tune perf of has() more
+
+* ensure we only create sources in effect_active()
+
+* fix proxy of computed fields
+
+* simplify and fix issue with indexed each blocks
+
+* fix compiler errors around exported state
+
+* only create source for state that is reassigned
+
+* temporary fix, we should come up with something better than this
+
+* readonly props
+
+* fix test
+
+* add test for bind:
+
+* make readonly dev-only
+
+* docs
+
+* forbid setPrototypeOf
+
+* lol whoops
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>
+Co-authored-by: Dominic Gannaway <dg@domgan.com>"
+add missing changelog entry
+"chore: fix compiler-errors test suite (#9754)
+
+- fix compiler-errors test suite
+- handle css nth-selector syntax (fixes #9765)
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+"chore: remove `exposable` (#9783)
+
+* use flags for prop_source, this will be useful later
+
+* remove exposable/expose stuff
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"feat: disallow fallback values with bindings in runes mode (#9784)
+
+* disallow fallback values with bindings in runes mode
+
+* on second thoughts
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"check runtime errors (#9791)
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"feat: make fallback prop values readonly (#9789)
+
+* WIP
+
+* update tests
+
+* only make readonly in runes mode
+
+* remove this for now
+
+* changeset
+
+* ugh
+
+* add reassignment test
+
+* tweak message
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"chore: simplify await blocks (#9802)
+
+We never pass a signal to await blocks currently, so the ""is_signal"" check is unnecessary"
+"docs: replace event handlers with event props on preview site (#9793)
+
+also add event and snippets section to old vs new
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+"chore: use proxy instead of signal in createRoot (#9799)
+
+* use proxy instead of signal in createRoot
+
+* DRY
+
+* remove for now
+
+* lint
+
+* chore: use proxies instead of signals for spread/rest props (#9801)
+
+* use proxies instead of signals for spread/rest
+
+* fix some spread attribute stuff
+
+* remove is_signal calls
+
+* simplify some more
+
+* more
+
+* remove some unnecessary unwrapping
+
+* another
+
+* simplify
+
+* simplify
+
+* simplify
+
+* remove another MaybeSignal
+
+* more
+
+* remove more unwraps
+
+* code-golf, docs
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>
+
+* add missing jsdoc annotation
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+"chore: use `$$props` directly where possible (#9813)
+
+* use $$props directly in runes mode
+
+* this makes no sense
+
+* use $$props directly in runes mode
+
+* tidy up
+
+* typo
+
+* remove unreachable code
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"chore: tweak readonly error message (#9816)
+
+* tweak readonly error message
+
+* update tests
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"chore: code golf text_effect a bit (#9814)
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"chore: remove unused check (#9817)
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"fix: reuse proxy between objects (#9821)
+
+* chore: reuse proxy between objects
+
+* lint
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"fix: correctly apply scope on component children (#9824)
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"chore: skip READONLY_SYBOL check in prod (#9825)
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"chore: rethink props (#9826)
+
+Cleaned up prop_source and renamed it to prop. Updated tests accordingly"
+"chore: avoid creating unnecessary thunks (#9841)
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"remove unnecessary test (#10008)
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"#9985, but simpler (#10009)
+
+* #9985, but simpler
+
+* oops
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"remove 'alternatives considered' from feature request template (#10146)
+
+i don't think this is particularly useful"
+"Update deps (#10245)
+
+* bump deps
+
+* migrate
+
+* fix
+
+* downgrade jsdom/playwright
+
+* fix a type error
+
+* downgrade svelte
+
+* prettier
+
+* downgrade rollup
+
+* downgrade other deps
+
+* gah
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"docs: fix typos (#9849)
+
+* Update 02-runes.md
+
+Typo fix `whech` -> `which`
+
+* Update 02-runes.md
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+"feat: pass update function to store setup callbacks (#6750)
+
+Fixes #4880.
+Fixes #6737.
+
+This will be a breaking change for anyone who uses the StartStopNotifier
+type in their / implements custom stores.
+
+---------
+
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+"chore: fix weird formatting in recent changelog entry (#10257)
+
+* Fix weird formatting in recent changelog entry
+
+A recent auto-generated changelog entry had a `<p>` in it, which caused the Markdown rendering to look strange. Replacing `<p>` with `&lt;p&gt;` fixes the rendering.
+
+* Update packages/svelte/CHANGELOG.md
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+"docs: add category heading in docs pages (#8918)
+
+Co-authored-by: Romain Crestey <romain.crestey@radiofrance.com>
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>"
+"docs: remove compiler duplicate paragraph (#8980)
+
+Co-authored-by: Romain Crestey <romain.crestey@radiofrance.com>"
+fix: typo (#9102)
+"fix: add global compound selector validation (#6322)
+
+fixes #6272
+prevents invalid CSS output
+
+---------
+
+Co-authored-by: Roy Choo <roy.choo@bytedance.com>
+Co-authored-by: tanhauhau <lhtan93@gmail.com>
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+fix: svelte.dev site scripts filepath generation (#9273)
+"[docs] move `@html` tutorial to end (partly fixing #7253) (#7254)
+
+* Move @html tutorial to end
+
+* move debug and html tag into one section
+
+* rename
+
+---------
+
+Co-authored-by: Rmi Marche <35939574+Marr11317@users.noreply.github.com>
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+"chore: TS to JSDoc Conversion (#8569)
+
+
+---------
+
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+feat: minor type improvements (#9989)
+"[docs] add inline documentation to svelte runtime functions (#7846)
+
+* add documentation
+
+* add links do docs"
+"[docs] add rel noreferrer to fix warning in tutorial (#8024)
+
+Co-authored-by: vaishnav <vaishnav240204@gmail.com>
+Co-authored-by: Alfredo Vecino <fredovecino@gmail.com>
+Co-authored-by: Yuichiro Yamashita <xydybaseball@gmail.com>"
+site: add `type="search"` to search input (#9263)
+[docs] add missing semicolon (#8190)
+[docs] use KeyboardEvent.code (#7809)
+[fix] typo in transition docs (#7739)
+"[docs] fix typo (#7672)
+
+* [docs] fix typo
+
+Fixed ""quckly"" to ""quickly""
+
+* [docs] fix typo
+
+Fixed ""beend"" to ""been"".
+
+* [docs] fix typo
+
+Fixed ""propsoal"" to ""proposal""."
+"[docs] fix link redirect to discord (#7911)
+
+* fix link redirect to discord
+
+* fix link redirect to discord"
+"[feat] Add a11y rule to check no tabindex in nointeractive element (#6693)
+
+* [feature] add util module to check element is interactive element
+
+* [feature] add util module to check role is interactive role
+
+* [feature] add a11y checker for no-nointeractive-tabindex
+
+* [chore] add test for no-nointeractive-tabindex
+
+* [chore] fix tabindex-no-positive test div -> button
+
+* [refactor] bundle up two filter into one
+
+* Refactor: export a11y-no-nointeractive-tabindex warning from compiler_warning
+
+* slight refactor to use existing utils
+
+Co-authored-by: tanhauhau <lhtan93@gmail.com>"
+[chore] Bump actions' versions (#7921)
+"[chore] Upgrade css-tree version to 2.1.0 (#7572)
+
+* chore: upgrade to css-tree major version
+
+* fix: handle whitespace token for new ast
+
+* fix: css syntax error
+
+* remove @types/css-tree
+
+* import css-tree/parser instead of file path import
+
+Co-authored-by: tanhauhau <lhtan93@gmail.com>"
+[docs] update intro sentence of reactive declarations tutorial (#7467)
+Update changelog
+"[feat] add convenience types ComponentType and ComponentProps (#6770)
+
+ComponentType eases typing ""this is a variable that expects a Svelte component constructor (of a certain shape)"". Removes the need for SvelteComponentTyped to be an extra type so it can be deprecated in v4 and removed in v5, and SvelteComponent(Dev) can receive the same generic typings as SvelteComponetTyped in v4.
+
+ComponentProps eases typing ""give me the props this component expects"". Closes #7584
+
+
+Co-authored-by: Simon Holthausen <simon.holthausen@accso.de>
+Co-authored-by: Hofer Ivan <ivan.hofer@outlook.com>
+Co-authored-by: Ignatius Bagus <ignatius.mbs@gmail.com>"
+"[fix] export CompileOptions (#7658)
+
+It's used by SvelteKit and in order to properly use it under the new TS moduleResolution NodeNext it needs to be part of a file that is defined in the exports map"
+update changelog
+update changelog
+update changelog
+update changelog
+"[feat] enhance action typings (#7805)
+
+Allows a way to tell language tools which additional attributes and events the action brings to the HTML element
+Related https://github.com/sveltejs/language-tools/pull/1553"
+update changelog
+"[fix] Only show lowercase component warning for non-html/svg elements (#7826)
+
+Fixes #5712"
+[fix] typings for #7863
+Update changelog
+[fix] don't emit css option deprecation warning for now (#8012)
+"[fix] util polyfill to make compiler self-contained (#8014)
+
+this is needed for running the Svelte compiler in the browser
+Fixes #8010"
+[fix] don't run binding init unnecessarily (#7981)
+"[feat] add html typings (#7649)
+
+This adds typings for HTML elements and their attributes. It's supposed to be used by the new transformation in language-tools.
+
+Co-authored-by: Ignatius Bagus <ignatius.mbs@gmail.com>
+Co-authored-by: Lyu, Wei-Da <36730922+jasonlyu123@users.noreply.github.com>"
+"[docs] adjust code snippet to conform with previous one
+
+Backported from https://github.com/sveltejs/learn.svelte.dev/pull/143"
+[fix] add submitter property to submit event
+update changelog
+"[docs] clear timeout on destroy
+
+backported from https://github.com/sveltejs/learn.svelte.dev/pull/166"
+"[fix] propagate bindings correctly (#8114)
+
+Fixes #8103 introduced through #7981
+Keeps the infinite loop from happening but reopens #6298 and #5689"
+update changelog
+update changelog
+chore: update changelog
+"docs: note #if to wrap text only
+
+taken from #7070"
+chore: update changelog
+"chore: improve parser performance (#8303)
+
+- fast path for attribute quote marks common case
+- all regexes exclusively passed into read or match_regex which are only successful if matched at the beginning are altered so that the regex has this condition built in, preventing it from searching past the start index
+
+---------
+
+Co-authored-by: Yuichiro Yamashita <xydybaseball@gmail.com>"
+chore: update changelog
+"fix: compute rect directly before crossfading (#8314)
+
+closes #4344
+fixes #4111"
+chore: update changelog
+"fix: remove indeterminate from boolean attributes (#8334)
+
+It's only existing as a boolean property
+cleanup of #7944"
+chore: update changelog
+"fix: hide some a11y warnings for `<svelte:element>` tags (#8335)
+
+Some a11y warnings only work on specific tags, which results in potential false positives for `<svelte:element>` tags - silence those
+closes #7939"
+chore: update changelog
+chore: update changelog
+"fix: typings for naturalWidth/Height bindings
+
+follow-up to #7857"
+chore: update changelog
+fix: add visibility event to types
+"fix: correct meta attributes
+
+fixes https://github.com/sveltejs/language-tools/issues/1917"
+chore: update changelog
+"fix: revert buggy reactive vars optimization (#8382)
+
+Reverts #7942
+Fixes #8374"
+chore: update changelog
+chore: update changelog
+fix: typings for `svelte:document`
+"fix: relax `a11y-no-noninteractive-element-to-interactive-role` warning (#8402)
+
+#8167 introduced the strict version of it - until this is configurable, we should use the relaxed version instead, since many a11y docs actually advise using ul/ol etc"
+chore: update changelog
+chore: update changelog
+"fix: special-case width/height attribute during spread (#8412)
+
+fixes #6752
+
+---------
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+Co-authored-by: Tan Li Hau <tanhauhau@users.noreply.github.com>"
+chore: update changelog
+"fix: observer PR cleanup (#8484)
+
+leftovers from #8022"
+"chore: remove node<14 tests (#8482)
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>"
+chore: Update CHANGELOG.md
+chore: Update CHANGELOG.md
+"breaking: deprecate SvelteComponentTyped, add generics to SvelteComponent (#8512)
+
+Also add data- attribute to HTMLAttributes and use available TS interfaces"
+"feat: custom elements rework (#8457)
+
+This is an overhaul of custom elements in Svelte. Instead of compiling to a custom element class, the Svelte component class is mostly preserved as-is. Instead a wrapper is introduced which wraps a Svelte component constructor and returns a HTML element constructor. This has a couple of advantages:
+
+- component can be used both as a custom element as well as a regular component. This allows creating one wrapper custom element and using regular Svelte components inside. Fixes #3594, fixes #3128, fixes #4274, fixes #5486, fixes #3422, fixes #2969, helps with https://github.com/sveltejs/kit/issues/4502
+- all components are compiled with injected styles (inlined through Javascript), fixes #4274
+- the wrapper instantiates the component in `connectedCallback` and disconnects it in `disconnectedCallback` (but only after one tick, because this could be a element move). Mount/destroy works as expected inside, fixes #5989, fixes #8191
+- the wrapper forwards `addEventListener` calls to `component.$on`, which allows to listen to custom events, fixes #3119, closes #4142 
+- some things are hard to auto-configure, like attribute hyphen preferences or whether or not setting a property should reflect back to the attribute. This is why `<svelte:options customElement={..}>` can also take an object to modify such aspects. This option allows to specify whether setting a prop should be reflected back to the attribute (default `false`), what to use when converting the property to the attribute value and vice versa (through `type`, default `String`, or when `export let prop = false` then `Boolean`), and what the corresponding attribute for the property is (`attribute`, default lowercased prop name). These options are heavily inspired by lit: https://lit.dev/docs/components/properties. Closes #7638, fixes #5705
+- adds a `shadowdom` option to control whether or not encapsulate the custom element. Closes #4330, closes #1748 
+
+Breaking changes:
+- Wrapped Svelte component now stays as a regular Svelte component (invokeing it like before with `new Component({ target: ..})` won't create a custom element). Its custom element constructor is now a static property named `element` on the class (`Component.element`) and should be regularly invoked through setting it in the html.
+- The timing of mount/destroy/update is different. Mount/destroy/updating a prop all happen after a tick, so `shadowRoot.innerHTML` won't immediately reflect the change (Lit does this too). If you rely on it, you need to await a promise"
+note of restructuring
+"fix: Handle dynamic values in `a11y-autocomplete-valid` (#8567)
+
+Fixes #8562
+Fixes #8565"
+"feat: change preprocessor ordering, allow attributes modification (#8618)
+
+- change mapping order
+- add support to modify attributes of script/style tags
+- add source mapping tests to preprocessor tests"
+"chore: unbundled esm (#8613)
+
+- remove esm bundle step
+- introduce generated version.js because we can no longer use replace because we don't bundle esm
+- remove register hook, cjs compiler output and cjs runtime
+- keep umd compiler version for prettier/eslint/browser but without sourcemaps
+- move devdependencies to dependencies where necessary
+- various cleanup
+
+---------
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+Co-authored-by: gtmnayan <50981692+gtm-nayan@users.noreply.github.com>"
+"chore: warn about `:` in attributes and props (#8633)
+
+closes #6823
+
+---------
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+Co-authored-by: Rich Harris <git@rich-harris.dev>"
+"feat: apply inert to outroing elements (#8628)
+
+that way they are invisible to assistive technology and can't be interacted with, which makes sense since the element is already ""dead"" and only transitioning out at this point
+closes #8445"
+"feat: make transitions local by default (#8632)
+
+To make them global, add the |global modifier
+This is a breaking change
+closes #6686"
+"feat: allow #each to iterate over iterables (#8626)
+
+closes #7425
+Uses a new ensure_array_like function to use Array.from in case the variable doesn't have a length property ('length' in 'some string' fails, therefore obj?.length). This ensures other places can stay unmodified. Using for (const x of y) constructs would require large changes across the each block code where it's uncertain that it would work for all cases since the array length is needed in various places."
+"docs: note limitations of not using shadow root (#8734)
+
+closes #8686"
+"docs: Svelte 3/4 differences (#8740)
+
+note some inline, drive-by-fix in custom element docs
+closes #8703"
+"fix: never use html optimization for mustache tags in hydration mode (#8744)
+
+
+---------
+
+Co-authored-by: gtmnayan <gtmnayan@gmail.com>"
+docs: migration page (#8739)
+"chore: a11y tests cleanup (#8759)
+
+closes #8728
+Turns out all the removed previous test failures are indeed correct to be removed, according to the test adjustments in https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/pull/937"
+"Merge pull request from GHSA-gw32-9rmw-qwww
+
+* rename previous test
+
+* add new <textarea bind:value> test
+
+* escape value in <textarea bind:value>
+
+---------
+
+Co-authored-by: Conduitry <git@chor.date>"
+"breaking: use `CustomEvent` constructor instead of deprecated `createEvent` method (#8775)
+
+closes #8474"
+"fix: account for sourcemap in meta info (#8778)
+
+We need to use a different method for getting the meta info because `locate` is used to help construct the source map that references the preprocessed Svelte file. If we would now add source maps to that `locate` function it would go the the original source directly which means skipping potentially intermediate source maps which we would need in other situations. Sadly we can't map the character offset because for that we would need to the original source contents which we don't have in this context.
+
+fixes #8360
+closes #8362"
+"docs: tweaks (#8798)
+
+- link to createEventDispatcher typings
+- svelte action type error fix
+- migration guide tweak
+- add back blog post that has gone missing"
+"docs: update transitions tutorial (#8822)
+
+fixes #8820"
+"fix: remove tsconfig.json from published package (#8859)
+
+fixes #8839"
+"fix: relax a11y ""no redundant role"" rule for li, ul, ol (#8867)
+
+fixes #8854"
+"fix: ensure createEventDispatcher and ActionReturn work with generic function types (#8872)
+
+fixes #8860
+
+This contains a small but unfortunately unavoidable breaking change: If you used `never` to type that the second parameter of `createEventDispatcher` shouldn't be set or that the action accepts no parameters (which the docs recommended for a short time), then you need to change that to `null` and `undefined` respectively"
+"fix: check srcset when hydrating to prevent needless requests (#8868)
+
+
+---------
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>"
+docs: more details on transition migration
+"fix: use non-destructive hydration for all `@html` tags (#8880)
+
+html tags that could be optimized to use innerHTML in mount ignored any hydration code, which leads to everything getting unmounted and mounted again. This takes the non-optimized path for hydration, too.
+
+fixes https://github.com/sveltejs/kit/issues/10245"
+"chore: run tsc properly (#8884)
+
+Runs type check as part of the CI. This needs a new path alias in the tsconfig so that TS resolves the svelte import in the ambient file directly to the correct d.ts file and doesn't load Svelte through the node_modules, at which point it would load the generated ambient type definitions and throw a duplicate definitions error.
+
+Also removes a tgz that was accidentally added"
+"fix: shrink custom element baseline a bit (#8858)
+
+- use shorter class property names as they are not minified
+- reuse some dom helper methods
+
+#8826"
+"fix: reflect all custom element prop updates back to attribute (#8898)
+
+fixes #8879"
+"fix: handle falsy srcset values (#8901)
+
+fixes #8899"
+"fix: claim svg tags in raw mustache tags correctly (#8910)
+
+fixes #8904"
+"fix: repair invalid raw html content during hydration (#8912)
+
+When the HTML that is coming from raw html is invalid, the browser reshuffles things. Bail in that case to try to repair more often. Should help with https://github.com/withastro/astro/issues/7557"
+"docs: preprocessor migration details (#8927)
+
+closes #8916"
+"feat: add ability to extend custom element class (#8991)
+
+This should help everyone who has special needs and use cases around custom elements. Since Svelte components are wrapped and only run on connectedCallback, it makes sense to expose the custom element class for modification before that.
+- fixes #8954 / closes #8955 - use extend to attach the function manually and save possible values to a prop
+- closes #8473 / closes #4168 - use extend to set the proper static attribute and then call attachInternals in the constructor
+- closes #8472 - use extend to attach anything custom you need
+- closes #3091 - pass `this` to a prop of your choice and use it inside your component
+- add some doc for #8987"
+"fix: don't add accessor twice (#8996)
+
+In dev mode, Svelte creates a setter to throw an error noting that you can't set that readonly prop, which resulted in the accessor getting applied twice to the custom element wrapper, causing an error
+fixes #8971"
+docs: note ambient module info (#9106)
+"site: runes banner (#9228)
+
+* site: runes banner
+
+* well I should get the title right, shouldnt I?
+
+* padding
+
+* fix typo
+
+* tweak"
+"fix: support camelCase properties on custom elements (#9328)
+
+while attributes are case insensitive, properties are not. to not introduce a breaking change, the lowercased variant is checked first.
+fixes #9325"
+fix: repair pnpm lock to deduplicate packages and make repl working again (#9333)
+"chore: rewire some master occurences (#9379)
+
+(main for a few in contributing; doesn't exist yet but will, soon)"
+site: summit banner (#9378)
+"chore: cleanup (#9381)
+
+* lets see if this works
+
+* fix versions
+
+* sigh
+
+* debugging ci is sooo fun
+
+* oh wow
+
+* fix stuff, changelog, add back readme
+
+* appease prettier
+
+* format stuff"
+"breaking: remove Component type, keep using SvelteComponent instead (#9413)
+
+I came to the conclusion that when we're making up arbitrary types, we might as well keep the old class. That way:
+- one less thing to worry about (language tools and other tooling basically can continue to spit out SvelteComponent )
+- we can more clearly mark $set , the constructor etc as being deprecated and no longer functioning unless you use that legacy compatibility mode
+- much more ergonomic to type for the user:
+  - const someInstance: SvelteComponent<..> instead of const someInstance: ReturnType<typeof Component<..>>
+  - If you're using generics, you can do export class MyComponent<T> extends SvelteComponent<{ prop: T }> {} instead of having to type out the whole function in a way that I'm not even sure how to do with generics"
+"fix: check that snippet is not rendered as a component (#9423)
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"fix: add missing files binding (#9415)
+
+no two-way binding because setting it involves a `DataTransfer` workaround, so it's not really officially supported that way - if you need that, you shouldn't use that binding probably. This matches the behavior in Svelte 4.
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+fix: support class exports (#9465)
+"fix: handle dynamic selects with falsy select values (#9471)
+
+when options are added later, we need to ensure the select value still stays in sync
+fixes #9412"
+"fix: tweak script/style tag parsing/preprocessing logic (#9502)
+
+Related to sveltejs/language-tools#2204 / sveltejs/language-tools#2039
+The Svelte 5 version of #9486 and #9498
+
+---------
+
+Co-authored-by: Rich Harris <richard.a.harris@gmail.com>
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"fix: add top level snippets to instance scope (#9467)
+
+fixes #9460"
+"fix: adjust static attribute regex (#9552)
+
+Svelte 5 version of #9551"
+"fix: adjust regex (#9572)
+
+would error on non-quoted attributes with more than one character"
+"feat: add Snippet type (#9584)
+
+* feat: add Snippet type
+
+related to #9447
+
+* one more test"
+"fix: prevent false positives when detecting runes mode (#9599)
+
+Move references from module scope to instance scope if we determined that these references are store subscriptions
+fixes #9580"
+"chore: better error message for not using snippet type (#9602)
+
+language tools checks that a function passed to `{@render ..}` is returning a type that adheres to the `Snippet` return type. When it does not, the error message is pretty useless without this additional info text."
+"fix: better attribute casing logic (#9626)
+
+- don't lowercase attributes on svg and custom element elements, fixes #9605
+- better lowercasing + property alias checking for spreads, fixes #9305"
+fix: dont error on stores looking like runes when runes explicitly turned off (#9615)
+"fix: omit this bind this arg if we know it's not a signal (#9635)
+
+fixes #9629
+
+Co-authored-by: Dominic Gannaway <dg@domgan.com>"
+"fix: prevent reactive snippet from reinitializing unnecessarily (#9665)
+
+untrack the invocation itself, only track the snippet function
+fixes #9652"
+"fix: take event attributes into account when checking a11y (#9664)
+
+also adjusted the warning messages slightly so they make sense for both variants of event handlers
+fixes #9654"
+"fix: handle ts expressions when dealing with runes (#9681)
+
+* fix: handle ts expressions when dealing with runes
+
+related to #9639
+
+* docs, more tests
+
+* simplify
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"fix: add children to element typings (#9679)
+
+* fix: add children to element typings
+
+Add this here so that libraries doing `props$<HTMLButtonAttributes>()` don't need a separate interface
+fixes #https://github.com/sveltejs/language-tools/issues/2218
+
+* typo"
+"docs: enhance breaking change section (#9674)
+
+* docs: enhance breaking change section
+
+- mention createRoot first, explain difference to mount
+- mentiond bind:this change
+- sub headings
+- adjust createRoot type that missed the events property
+
+* Update packages/svelte/src/internal/client/render.js
+
+Co-authored-by: Conduitry <git@chor.date>
+
+* clarify
+
+---------
+
+Co-authored-by: Conduitry <git@chor.date>
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"fix: ensure implicit children snippet renders correctly (#9706)
+
+place anchors around render tags, not snippet tags
+fixes #9678"
+"fix: delegate events on elements with bind-this (#9696)
+
+fixes #9688"
+"fix: allow `bind:this` with dynamic type on inputs (#9713)
+
+fixes #9709"
+"fix: tweak const tag parsing (#9715)
+
+fixes #9711"
+"fix: port over props that were set prior to initialization (#9704)
+
+Svelte 5 version of #9701"
+"fix: keep fallback value after spread update not setting that prop (#9717)
+
+fixes #9716"
+"fix: ensure `$$slots` exists in runes mode (#9718)
+
+fixes #9683"
+"chore: more validation errors (#9723)
+
+* invalid directive on component
+
+* duplicate animation
+
+* invalid animation
+
+* no const assignment
+
+* expected token
+
+* invalid-attribute-name
+
+* fixes
+
+* invalid event modifier
+
+* component name
+
+* slot validation
+
+* fix test
+
+* const validation + fix double declaration bug
+
+* omg this validation is skipped in svelte 4, remove it entirely then
+
+* gah
+
+* unskip
+
+* contenteditable
+
+* invalid css selector
+
+* css global selector + css parser fixes
+
+* export default
+
+* dynamic element
+
+* each block
+
+* html tag
+
+* logic block
+
+* reactive declaration
+
+* duplicate script
+
+* namespace
+
+* module context
+
+* slot
+
+* svelte fragment
+
+* textarea
+
+* title
+
+* transition
+
+* window bindings
+
+* changeset
+
+* svelte head, let directive, tweaks"
+"fix: apply event attribute validation to elements only (#9772)
+
+fixes #9755"
+"feat: runes globals error (#9773)
+
+* feat: runes globals error
+
+throw descriptive error for using runes globals outside of Svelte-compiled files
+
+* less hacky/more future-proof treeshaking check
+
+* tweak
+
+---------
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>"
+"fix: tweak css nth regex (#9806)
+
+fixes #9795"
+"fix: better readonly checks for proxies (#9808)
+
+- Expect the thing that's checked to be wrapped with the proxy already, so that we can just check for the state symbol
+- Make error message more descriptive"
+"fix: prevent infinite loops stemming from invalidation method (#9811)
+
+* fix: prevent infinite loops stemming from invalidation method
+
+The logic was flawed: the captured signals where always added to the previous captured no matter what, which meant a) memory leak b) that when another one runs afterwards, it will falsely contain the signals from the previous run
+fixes #9788
+
+* fix lint"
+"breaking: change `$inspect` API (#9838)
+
+* breaking: change `$inspect` API
+
+`$inspect` now takes 1-n arguments, and inspections modification happens through `.with(..)`
+closes #9737
+
+* lint"
+"chore: check in types (#9863)
+
+To ensure that changes to code/types doesn't result in unwanted changes in type generation, or that bumps to dts-buddy don't cause unwanted regressions, we're checking in the generated types. Types should be committed as-is (don't format it with prettier!). CI is enhanced to check that git sees no changed files after generating the types, which would mean types have changed."
+"fix: handle pseudo class elements with content (#10055)
+
+closes #9398 (the other things in that issue are already addressed)
+closes #10019"
+"fix: deeply unstate objects passed to inspect (#10056)
+
+When doing `$inspect({ x, y })`, both `x` and `y` are now unstated if they are signals, compared to before where `unstate` was only called on the top level object, leaving the proxies in place which results in a worse debugging experience.
+Also improved typings which makes it easier to find related code paths."
+"fix: catch delegated events from elements moved outside the container (#10060)
+
+fixes #9777"
+"fix: support TS satisfies operator (#10068)
+
+fixes #9606"
+"fix: spread attributes reactivity improvements (#10071)
+
+- the objects could contain getters with reactive values, so we play it safe and assume they're always reactive - fixes #10065
+- isolate spreads with call expression similar to how we do it with other effects -fixes #10013"
+"fix: get spread + bind working (#10091)
+
+fixes #10033"
+"fix: correctly call exported state (#10114)
+
+fixes #10104
+also cleans up related code and adds support for destructuring `$state.frozen`"
+"fix: transform `{@render ...}` expression (#10116)
+
+fixes #10059"
+"feat: allow modifiying derived props (#10080)
+
+It's an unnecessary restruction because it can be worked around (hide it behind a getter/setter), already works for bind:x and prevents valid use cases"
+"fix: legacy reactive dependencies tweak (#10128)
+
+take into account member expressions when determining legacy reactive dependencies
+fixes #9954"
+"fix: make `@types/estree` a dependency (#10150)
+
+types are exposed through our types, so we need to add it as a dependency
+fixes #10010"
+"fix: simplify event delegation logic (#10169)
+
+* fix: simplify event delegation logic
+
+Only delegate event attributes, and don't take into account bindings/actions while determining that. Never delegate `on:` directives. This simplifies the logic and makes it easier to explain, while avoiding any accidental breaking changes when upgrading from Svelte 4 to 5 without changing code.
+Fixes #10165
+Related to #9714
+
+* update types"
+"fix: transform textarea and contenteditable binding expressions (#10187)
+
+fixes #10185"
+"fix: put more executions after the render effect(s) (#10186)
+
+snippets and slots should also come after the render effect so that they are executed in order with all the other things (if blocks, actions, etc etc)"
+"fix: react to mutated slot props in legacy mode (#10197)
+
+If a list is passed to a component and an item of that list is passed as a slot prop back up, then mutating a property of that item did not result in a rerun. The reason was that derived is using object identity equality, resulting in the value not being updated. To fix it, we use safe-equals in this situations instead."
+"fix: skip certain slot validations for custom elements (#10207)
+
+fixes #10196"
+chore: bit of code cleanup (#10218)
+"fix: sanitize component event names (#10235)
+
+fixes #9916"
+"fix: hydrate controlled each blocks correctly (#10259)
+
+Controlled each block didn't handle hydration of fallback correctly
+fixes #10231"
+"fix: allow `:global(..)` in compound selectors (#10266)
+
+Someone could programmatically add a class to an element and Svelte doesn't see it, so having global be part of a modifier is necessary so that Svelte doesn't mark it as unused
+fixes #10210"
+"fix: ensure proxy is updated before notifying listeners (#10267)
+
+fixes #10264
+fixes #10265"
+"chore: cleanup proxy files (#10268)
+
+- merge `readonly.js` into `proxy.js` and get rid of sub folder
+- extract types into `d.ts` file and properly document the properties
+- type tweaks"
+"fix: try-catch deep read (#10270)
+
+Accessing values might throw errors if they're not just values but getters. Guard against that by try-catching every access so that `$inspect` doesn't fail
+fixes the iframe error in the playground reported in #10174"
+"[chore] add ESLint Caching (#8069)
+
+see: https://eslint.org/docs/latest/user-guide/command-line-interface#caching"
+"chore: bump site-kit, use new components
+
+- use search components
+- use shell component"
+Merge branch 'master' into version-4
+Merge branch 'master' into version-4
+rename ts to js
+silence wrong tsconfig errors
+fix: type error
+chore: warn on passed format option
+chore: changelog
+"chore: remove type * for better backwards compatibility
+
+doesnt need ts 5.0 then, at least for now"
+make sites private
+chore: adjust changeset config
+chore: remove warning from pull request template
+docs: note type enhancements breaking change
+"fix: add any fallback to generic
+
+was like this in Svelte 3"
+chore: exit prerelease mode
+"docs: fix snippet
+
+closes #8817"
+"docs: add a11y-no-static-element-interactions
+
+closes #8862"
+chore: tests for #8872
+"docs: update old blog post a bit
+
+since it's high on google search ranks we should update it to not confuse people"
+docs: add eslint migration
+"breaking: init Svelte 5
+
+Co-authored-by: Rich Harris <rich.harris@vercel.com>
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>
+Co-authored-by: Dominic Gannaway <dg@domgan.com>"
+chore: enter changeset prerelease mode
+chore: don't format changeset folder
+Merge branch 'main' of https://github.com/sveltejs/svelte
+docs: note more breaking changes
+chore: remove obsolete script
+chore: deduplicate
+"fix: remove constructor overload
+
+The original intent was for typing generation tools like svelte2tsx to use the virtual constructor instead, but it does more harm than good. Most notably, the TS error message when props are wrong becomes completely useless. It's better for tooling to silence the deprecation message and switch over to a new virtual constructor once we remove the deprecated one."
+"fix: type-level back-compat for default slot and children prop
+
+If someone has an existing SvelteComponent type definition and using the slot generic to type the default slot, automatically add that slot to the prop type as ""children"""
+"fix: adjust mount and createRoot types
+
+they expect the component constructor, not the instance"
+"fix: css parser fix
+
+when inside a pseudo-class, only `)` is a valid end, and when outside, only `{` is - reflect that in the logic"
+"fix: adjust children snippet default type
+
+Needs to be void so that zero args are passed to it
+fixes #9744"
+"docs: note null/undefined breaking change
+
+closes #10043"
+"fix: provide `unstate` in server environment
+
+fixes #10016"
+"fix: make `ComponentType` generic optional
+
+fixes #9975"
+"fix: keep intermediate number value representations
+
+fixes #9959"
+"fix: silence false positive state warning
+
+the continue was essentially a noop because it targeted the wrong for loop"
+"chore: better test case
+
+closes #10129"
+fix: adjust `$inspect.with` type
+"fix: adjust `parse` return type
+
+It returns the root which contains the Svelte nodes"
+"chore: fix signals test suite
+
+now simulates a component environment more correctly"
+"fix: correct increment/decrement code generation
+
+fixes #10226"
+"fix: clarify error message
+
+closes #10109"
+"docs: note `bind:files` breaking change
+
+closes #10032"
+"fix: add back `derived` type overload
+
+fixes #9866"
+"fix: ignore comments while comparing nodes in node_match (#9197)
+
+related to issue #9088
+it doesn't solve the main problem of dependencies getting invalidated whenever value of a variable gets changed.
+but it fixes the behavior difference between the code with and without comments"
+"fix: allow use of document root as target in typescript (#7554)
+
+It is not possible to use typescript when using `target: document`
+during component initialization, because target can only be of type
+Element or ShadowRoot. This means that it is not possible to hydrate
+the entire document when managing the <html> element as a Svelte
+component.
+
+This commit fixes this by allowing documents to be targets."
+"docs: change fade to fly to match the tutorial (#8982)
+
+In Transitions / Key Blocks the documentation showed a fade transition and this was not in sync with the tutorial which used a fly transition."
+Link to sites repository in README.md (#7684)
+"[docs] clarify array methods that won't trigger reactivity (#7073)
+
+Co-authored-by: Tan Li Hau <tanhauhau@users.noreply.github.com>
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+Co-authored-by: Gabor Szabo <gabor@szabgab.com>
+Co-authored-by: gtmnayan <50981692+gtm-nayan@users.noreply.github.com>"
+[fix] Use `Node.parentNode` instead `Node.parentElement` for legacy browser support (#7724)
+Update CHANGELOG.md
+fix const declared without let: binding get ignored (#7434)
+Update CHANGELOG.md
+"each animate allow having comment siblings (#7435)
+
+Co-authored-by: GHOST <ghostdevbusiness@gmail.com>
+
+Co-authored-by: GHOST <ghostdevbusiness@gmail.com>"
+Update CHANGELOG.md
+"[fix] correctly track dependencies of let: bindings (#7448)
+
+Fixes #7440"
+Update CHANGELOG.md
+Update CHANGELOG.md
+Update CHANGELOG.md
+"[docs] add more examples on the spring store API docs (#7463)
+
+* add more examples on the spring store API docs
+
+* Update site/content/docs/03-run-time.md
+
+Co-authored-by: Ignatius Bagus <ignatius.mbs@gmail.com>
+
+* Update site/content/docs/03-run-time.md
+
+Co-authored-by: Ignatius Bagus <ignatius.mbs@gmail.com>
+
+Co-authored-by: Ignatius Bagus <ignatius.mbs@gmail.com>"
+use own api to replace jsonplaceholder.typicode.com (#7472)
+[feat] support const tag for if block (#7451)
+Update CHANGELOG.md
+Update CHANGELOG.md
+Update CHANGELOG.md
+Update CHANGELOG.md
+Update CHANGELOG.md
+rename test files from svelte-slot -> svelte-fragment (#7679)
+"fixed removal of empty stylesheets created from transitions (#7662)
+
+Co-authored-by: Mathias Picker <mattis123@live.no>"
+Update CHANGELOG.md
+Update CHANGELOG.md
+"[fix] error when using combinator incorrectly (#7650)
+
+* error when using combinator incorrectly
+
+* add new test case"
+Update CHANGELOG.md
+Update CHANGELOG.md
+"Update 05-accessibility-warnings.md
+
+reorder a11y warnings"
+Update CHANGELOG.md
+Update CHANGELOG.md
+Update CHANGELOG.md
+apply class for dynamic elements (#7652)
+Update CHANGELOG.md
+Update CHANGELOG.md
+Update CHANGELOG.md
+Update CHANGELOG.md
+Update CHANGELOG.md
+Update CHANGELOG.md
+Update CHANGELOG.md
+Update CHANGELOG.md
+allow nullish values for component event handlers (#7863)
+Update CHANGELOG.md
+Update CHANGELOG.md
+[feat] Support style props for SVG components (#7859)
+"[fix] call `on_destroy` if unmounted called immediately before `on_mount` (#7860)
+
+* call on_destroy if unmounted called immediately before on_mount
+
+* feat: review changes"
+[fix] do not warn about missing props for bindings (#6583)
+"[feat] better error message for invalid logic block placement (#7862)
+
+* better error message for invalid logic block placement
+
+* include checking for {@html} tags in invalid location"
+Update CHANGELOG.md
+Update CHANGELOG.md
+Update CHANGELOG.md
+Update CHANGELOG.md
+[fix] duplicate meta tags during hydration (#7941)
+[feat] pre-build before testing in CI (#7933)
+Update CHANGELOG.md
+[fix] allow invalidating variables from @const declared function (#7858)
+Update CHANGELOG.md
+Update CHANGELOG.md
+Update CHANGELOG.md
+Update CHANGELOG.md
+feat: simpler output for reactive vars if dependencies are all static (#7942)
+"feat: add naturalWidth and naturalHeight bindings (#7857)
+
+Closes #7771
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+Update CHANGELOG.md
+Update CHANGELOG.md
+"feat: optimise svelte-element output code for static tag and static attribute (#8161)
+
+* feat: optimise svelte-element output code for static tag and static attribute
+
+* Update src/compiler/compile/render_dom/wrappers/Element/index.ts
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+
+* Update src/runtime/internal/dom.ts
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+
+* Update src/compiler/compile/render_dom/wrappers/Element/index.ts
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+
+* fix logic
+
+* fix pipeline errors
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+Update CHANGELOG.md
+Update CHANGELOG.md
+"feat: add stopImmediatePropagation event modifier (#8341)
+
+Closes #5085
+
+---------
+
+Co-authored-by: Marcin Wicha <23581770+marcin-wicha@users.noreply.github.com>
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+"fix: call `<svelte:component>` update to `this` only when it's dirty (#4192)
+
+Closes #4129
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+fix validation for global compound selector (#8344)
+"feat: improve `bind:group` behavior (#7892)
+
+track all `#each` variables that could result in a change to the inputs and also update the `$$binding_groups` variable which holds the references to the inputs of each group accordingly.
+
+Fixes #7633
+Fixes #6112
+Fixes #7884"
+"fix: binding group with if block (#8373)
+
+Fixes #8372
+
+---------
+
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+"breaking: conditional ActionReturn type if Parameter is void (#7442)
+
+
+---------
+
+Co-authored-by: Ivan Hofer <ivan.hofer@outlook.com>
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+Co-authored-by: Ignatius Bagus <ignatius.mbs@gmail.com>
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+"feat: improve hydration, claim static html elements using innerHTML instead of deopt to claiming every nodes (#7426)
+
+Related: #7341, #7226
+
+For purely static HTML, instead of walking the node tree and claiming every node/text etc, hydration now uses the same innerHTML optimization technique for hydration compared to normal create. It uses a new data-svelte-h attribute which is added upon server side rendering containing a hash (computed at build time), and then comparing that hash in the client to ensure it's the same node. If the hash is the same, the whole child content is expected to be the same. If the hash is different, the whole child content is replaced with innerHTML.
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+"Do not expose default slot let bindings to named slots (#6049)
+
+* should not extend scope for across slots
+
+* disallow named slots inheriting let: scope from default slots
+
+* fix tests
+
+* fix test
+
+* fix
+
+* add runtime tests
+
+* rename test since it doesn't inherit anymore
+
+* fix lint
+
+* remove warnings
+
+* add compile script
+
+* document script
+
+* improve warning
+
+* fix test
+
+* handle renames
+
+* fix lint
+
+* gather names from all parents instead of just the nearest
+
+* remove unused import
+
+* add reminder
+
+---------
+
+Co-authored-by: gtmnayan <gtmnayan@gmail.com>"
+fix: hackernews example link colors contrast in dark mode (#8922)
+docs: choose a color that looks great on both dark and light theme (#8921)
+docs: fix contrast for component-binding example (#8920)
+use own api to replace jsonplaceholder.typicode.com
+update api
+Merge branch 'tanhauhau/gh-328'
+update docs for a11y-no-noninteractive-tabindex and rename from a11y-no-nointeractive-tabindex -> a11y-no-noninteractive-tabindex
+execute `npm audit fix` (#7421)
+allow setting files (#9463)
+chore: remove duplicate condition in `if` statement (#9023)
+"fix: take custom attribute name into account when reflecting property (#9140)
+
+fixes #9134"
+"fix: svelte:element with dynamic this and spread attributes throws error (#9112)
+
+fixes #9092
+
+---------
+
+Co-authored-by: gtmnayan <50981692+gtm-nayan@users.noreply.github.com>
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+"fix: spreading attributes on option value attribute get's replaced by option's inner text (#9125)
+
+fixes #9107
+Apart from the problem with the option the same happens with the textarea."
+[docs] Improve clarity of 2 files to edit and improve learning (#7285)
+"docs: change Typescript to JSDoc in Readme.md (#8851)
+
+
+---------
+
+Co-authored-by: gtmnayan <50981692+gtm-nayan@users.noreply.github.com>"
+"feat: introduce axis parameter to allow for horizontal slide transition (#6183)
+
+
+
+---------
+
+Co-authored-by: Tan Li Hau <tanhauhau@users.noreply.github.com>"
+"fix: select first enabled option by default when initial value is undefined (#8331)
+
+Fixes an unintended regression introduced in #6170.
+
+Fixes #7041"
+"fix: select option with selected attribute when initial state is undefined (#8371)
+
+Resolves a second unintended regression introduced in #6170.
+
+Follow-up to #8331, this time addressing the root issue so the correct select option won't be deselected in the first place when the initial bound value is undefined.
+
+Fixes #8361"
+"fix: bind null option and input values consistently (#8328)
+
+Null and undefined `value` bindings should always be set to an empty string. This allows native browser validation of `required` fields to work as expected with placeholder options.
+
+Placeholder options bound to null are necessary in forms where the field is conditionally required, and the bound value is posted to an API endpoint which requires it to be a nullable number or object rather than a string.
+
+fixes #8312"
+docs: fix TypeScript event name typos (#8844)
+"fix: select enabled option with null value when it matches bound value (#9550)
+
+Fix select binding when matching enabled option has null value
+Fix null option being selected when it doesn't match the bound value
+
+Fixes #9545"
+[chore] fix `a11y-no-nointeractive-tabindex` typo (#8252)
+"feat: add `a11y-no-static-element-interactions` compiler rule (#8251)
+
+Ref: #820"
+"fix: support hydrating around `<noscript>` (#9953)
+
+* add test
+
+* fix: support hydrating around `<noscript>`
+
+* changeset"
+[docs] fix link in November newsletter (#7998)
+[fix] a11y - allow fallback roles (#8045)
+"fix: silence no content a11y warning if the tag has an aria-label (#8299)
+
+fixes #8296
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+"[fix]: Warn user when binding rest operator (#7526)
+
+* Fix 6860: Warn user when binding rest operator
+
+* move the binding validation to Binding node
+
+* update test
+
+Co-authored-by: vaibhav rai <vaibhavrai@vaibhavs-MacBook-Pro.local>
+
+* add more test case, supporting deep destructuring and array destructuring
+
+Co-authored-by: vaibhav rai <vaibhavrai@vaibhavs-MacBook-Pro.local>
+Co-authored-by: tanhauhau <lhtan93@gmail.com>"
+"fix: no error assigning to a `const` property (#7966)
+
+Fixes #7964
+currently for a case where the parent type is ArrayPattern code needs to check if the elements are of direct type MemberExpression or Identifier, in the case of MemberExpression there will be an Identifier check for the Object of the MemberExpression.
+
+---------
+
+Co-authored-by: Yuichiro Yamashita <xydybaseball@gmail.com>"
+"fix: var scope should not extend outside the reactive block (#6800)
+
+Fixes: #6794
+
+---------
+
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+docs: Make white text on white background visible. (#8852)
+"fix: empty value attribute selector doesn't produce ""Unused CSS selector"" warning (#8122)
+
+Fixes: #8042
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+Co-authored-by: Yuichiro Yamashita <xydybaseball@gmail.com>"
+docs: fix typo in blog (#9373)
+"fix: add missing plaintext-only value to contenteditable type (#9242)
+
+fixes #9181"
+[fix] say "nonnegative" instead of "positive" tabIndex for `a11y-no-noninteractive-tabindex` (#8126)
+Add Hacktoberfest blog post (#9280)
+"chore: add missing svelte/transition functions (#9391)
+
+* chore: add missing svelte/transition functions
+
+* lint"
+"[fix] fix ctx and dirty type (#7832)
+
+* fix: ctx type
+
+* fix: update function dirty type"
+"fix: decode html entities correctly (#8047)
+
+fixes #8026
+
+1. replace the big entities list with entities that have a ; at the end where valid (there are some exceptions)
+2. construct two regexes from that entities list: one for HTML where it's strictly matched, one for attributes where it tries to match browser behavior by also allowing = / digit / character afterwards
+3. decode character references with one of these regexes depending on this is an attribute value or not
+
+---------
+
+Co-authored-by: Yuichiro Yamashita <xydybaseball@gmail.com>"
+"fix: html space entities lost in component slot (#8464)
+
+fixes #8359"
+"fix: inline style value become undefined (#8517)
+
+fixes #8462
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+"feat: add window bind devicePixelRatio support (#8534)
+
+closes: #8285
+
+add window bind devicePixelRatio support, change devicePixelRatio on window resize.
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+chore: eslint rule for naming convention (#9208)
+"[fix] strip leading newline after `<pre>` and `<textarea>` (#7280)
+
+Fixes #7264"
+[chore] improve performance by using `trimRight()` instead of regex replace (#7706)
+[chore] fix lint (#7466)
+"[fix] Specify svg namespace if {@html} is used in svg (#7464)
+
+* add test
+
+* create svg element if {@html} tag is inside of svg
+
+* always use claim_html_tag"
+[docs] fix sentences in `<svelte:element>` (#7484)
+[fix] always use `set_attributes` for attribute of `<svelte:element>` (#7486)
+[fix] rendering void tag for `<svelte:element>` (#7453)
+fix to apply class directive for svelte:element (#7531)
+[chore] update changelog (#7602)
+"[chore] remove nyc stuff (#7601)
+
+It appears that forgot to remove config related to nyc in this commit.
+
+https://github.com/sveltejs/svelte/commit/f1ca1cc0983ddf68c89f596776f54717c4075ede"
+update changelog
+update changelog
+[fix] Apply class directive properly after half way transition (#7765)
+update changelog
+[fix] add all global objects / functions (#7786)
+update changelog (#7835)
+[fix] style manager transition regression (#7831)
+throw warning instead of error (#7834)
+"[fix] added support for inert (remove duplicated code) (#7785)
+
+* fix: added support for inert
+
+* remove duplicated boolean_attributes
+
+Co-authored-by: Gautier Ben Am <48261497+GauBen@users.noreply.github.com>"
+"[feat] support `--style-props` for `<svelte:component>` (#7468)
+
+* add test
+
+* support --style-props for <svelte:component>
+
+* refactor
+
+* add more test
+
+* support switching instance
+
+* add test with svelte:self
+
+* merge duplicated if statement
+
+* slight refactor
+
+* remove unnecessary anchor
+
+* reorder insertion
+
+Co-authored-by: tanhauhau <lhtan93@gmail.com>"
+"[fix] call attribute bindings for custom element if <svelte:element> render custom element (#7766)
+
+* call attr bindings if tag is custom element
+
+* add test"
+"[feat] skip custom element check if <svelte:element> uses under svg (#7869)
+
+* add test
+
+* skip custom element check if svelte element uses under svg"
+update changelog
+"[fix] Improve error message if `this` attribute of `<svelte:component>` is not valid (#7551)
+
+* add test
+
+* improve error message if this attribute of <svelte:component> is not SvelteComponent
+
+* add more tests
+
+* improve validation
+
+* simplify test
+
+Co-authored-by: Tan Li Hau <tanhauhau@users.noreply.github.com>"
+Update CHANGELOG.md
+Update CHANGELOG.md
+Update CHANGELOG.md
+Update CHANGELOG.md
+"[chore] Improve CI (#7945)
+
+* stop to use cache
+
+* update on.push.branches
+
+* rename"
+Update CHANGELOG.md
+Update CHANGELOG.md
+Update CHANGELOG.md
+Update CHANGELOG.md
+Update CHANGELOG.md
+"[docs] add explanation about property binding order (#7833)
+
+* update document
+
+* update sentence and position
+
+* update the sentence
+
+* update"
+[fix] escape style attribute for SSR (#8087)
+[ chore] disable puppeteer on Linux for Node8 and 10 (#8155)
+Update CHANGELOG.md
+"[chore] Fix CI (#8160)
+
+* ci build
+
+* fix test
+
+* add test for #7938"
+"[fix] Improve `is_promise` handling (#8162)
+
+* correctly handle promises that are of function type
+
+* add License
+
+Co-authored-by: Vilsol <me@vil.so>"
+Update CHANGELOG.md
+chore: add Node18 for CI (#8078)
+"fix: flush remaining `afterUpdate` before `destroy` (#7516)
+
+fixes #7476"
+"fix: better handling of inert attribute (add tests) (#7944)
+
+* add inert to attribute_lookup
+
+* typed for preventing a repeat of the tragedy
+
+* add tests
+
+* revert unnecessary change
+
+* add more test
+
+---------
+
+Co-authored-by: fcrozatier <frederic.crozatier@protonmail.com>"
+add docs (#8326)
+"chore: Reduce number of lines of expected files (#8325)
+
+- removes character and pos from the expected output to reduce noise
+- adds a test that pos/character are correct"
+"fix: don't set selected option(s) if value is unbound or not passed (#8329)
+
+fix: #5644
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>"
+"fix: use `wholeText` for only `contenteditable` for `set_data` (#8394)
+
+- split logic up into ""is this a contenteditable element"" and depending on the outcome use either .wholeText or .data to check if an update is necessary
+- add to puppeteer because jsdom does not support contenteditable
+- one test is skipped it because it fails right now but helps test #5018
+
+---------
+
+Co-authored-by: suxin2017 <1107178482@qq.com>
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+Co-authored-by: Simon Holthausen <simon.holthausen@vercel.com>"
+fix: escape <textarea value={...}> attribute properly (#8434)
+chore: remove Node 8 and 10 logic (#8503)
+chore: TypeScript to JavaScript + JSDoc for tests (#8526)
+chore: fix CI on Node 20 (#8528)
+chore: add prettier (#8543)
+"chore: show ast on playground (#9440)
+
+The modern one"
+"docs: Update Breaking changes section (#9444)
+
+* update docs
+
+* Update sites/svelte-5-preview/src/routes/docs/content/03-appendix/02-breaking-changes.md
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+
+* Update sites/svelte-5-preview/src/routes/docs/content/03-appendix/02-breaking-changes.md
+
+* Update sites/svelte-5-preview/src/routes/docs/content/03-appendix/02-breaking-changes.md
+
+---------
+
+Co-authored-by: Simon H <5968653+dummdidumm@users.noreply.github.com>
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+Co-authored-by: Rich Harris <hello@rich-harris.dev>"
+"fix: Added missing context of `svelte.js` for validation (#9394)
+
+* fix
+
+* add changeset
+
+* Update .changeset/eighty-bikes-camp.md
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+
+* Update .changeset/eighty-bikes-camp.md
+
+---------
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>
+Co-authored-by: Rich Harris <hello@rich-harris.dev>"
+feat: add type of `$effect.active` (#9624)
+fix typos (#9622)
+add ci on node21 (#9621)
+"feat: support type annotations in `{@const ...}` tag  (#9609)
+
+* support type for const tag
+
+* use expression directly
+
+* lint
+
+* format
+
+* format
+
+* revert
+
+* legacy mode
+
+* format
+
+* revert and update .prettierignore"
+[fix] do not be over-eager in removing unused CSS for dialog[open] (#7495)
+"Ensure onmouseleave event fires in Hoverable example (#7873)
+
+Fixes the browser-quirk-related issue described in #6520 and #7867, based on a [suggestion](https://github.com/sveltejs/svelte/issues/7867#issuecomment-1248993436) by @Prinzhorn.
+
+Tested in the editable example area on the Svelte site: https://svelte.dev/examples/slot-props"
+"chore: refactor return statement in `_distance` function (#9025)
+
+Co-authored-by: Ben McCann <322311+benmccann@users.noreply.github.com>"
+"chore: refactor is_promise function (#9794)
+
+* Refactor is_promise function
+
+* Update packages/svelte/src/internal/common.js
+
+---------
+
+Co-authored-by: Mike <prince-poley@yandex.ru>
+Co-authored-by: Rich Harris <hello@rich-harris.dev>"
+"[docs] Typescript -> TypeScript (#7797)
+
+* [docs] fix spellings error
+
+* fix ts"
