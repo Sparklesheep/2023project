@@ -1,10 +1,4 @@
 # -*- coding = utf-8 -*-
-"""
-@File: spider.py
-@Author : Tianci
-@Time : 2024/1/23 14:15
-@Software : PyCharm
-"""
 
 import requests
 from requests.auth import HTTPBasicAuth
